@@ -32,7 +32,7 @@ export default function RootLayout({
 			>
 				<SidebarProvider>
 					<AppSidebar>
-						<main className="transition-[margin] duration-300 ease-in-out p-4 max-w-2xl grid grid-rows-[20px_1fr_20px] w-full">
+						<main className="transition-[margin] duration-300 ease-in-out p-4 max-w-2xl w-full">
 							{children}
 						</main>
 					</AppSidebar>

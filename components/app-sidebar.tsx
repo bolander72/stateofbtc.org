@@ -1,7 +1,7 @@
 "use client";
 
 import * as React from "react";
-import { ChevronRight } from "lucide-react";
+import { ChevronRight, GithubIcon } from "lucide-react";
 import { VersionSwitcher } from "@/components/version-switcher";
 import {
 	Collapsible,
@@ -21,6 +21,7 @@ import {
 	SidebarMenuItem,
 	SidebarRail,
 	SidebarTrigger,
+	SidebarFooter,
 } from "@/components/ui/sidebar";
 import { Separator } from "@radix-ui/react-separator";
 import {
@@ -32,11 +33,11 @@ import {
 } from "./ui/breadcrumb";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
+import { Button } from "./ui/button";
 
 type NavItem = {
 	title: string;
-	url: string;
-	items: NavItem[];
+	items: (NavItem & { url: string })[];
 };
 
 const data = {
@@ -44,7 +45,6 @@ const data = {
 	navMain: [
 		{
 			title: "General",
-			url: "/",
 			items: [
 				{
 					title: "Home",
@@ -57,9 +57,61 @@ const data = {
 			],
 		},
 		{
-			title: "Building Your Application",
-			url: "#",
-			items: [],
+			title: "Survey",
+			items: [
+				{
+					title: "Introduction",
+					url: "/survey",
+				},
+				{
+					title: "1) Features",
+					url: "/survey/features",
+				},
+				{
+					title: "2) Wallets",
+					url: "/survey/wallets",
+				},
+				{
+					title: "3) Exchanges",
+					url: "/survey/exchanges",
+				},
+				{
+					title: "4) Layer 2 Solutions",
+					url: "/survey/layers",
+				},
+				{
+					title: "5) Development Tools",
+					url: "/survey/development",
+				},
+				{
+					title: "6) Nodes & Infrastructure",
+					url: "/survey/nodes",
+				},
+				{
+					title: "7) Privacy Tools",
+					url: "/survey/privacy",
+				},
+				{
+					title: "8) Ordinals, Runes, NFTs, & Art",
+					url: "/survey/ordinals",
+				},
+				{
+					title: "9) Conferences & Community",
+					url: "/survey/conferences",
+				},
+				{
+					title: "10) Learning Resources",
+					url: "/survey/learning",
+				},
+				{
+					title: "11) About You",
+					url: "/survey/about",
+				},
+				{
+					title: "Conclusion",
+					url: "/survey/conclusion",
+				},
+			],
 		},
 	] as NavItem[],
 };
@@ -95,7 +147,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
 					/>
 					{/* <SearchForm /> */}
 				</SidebarHeader>
-				<SidebarContent className="gap-0 -space-y-2">
+				<SidebarContent className="gap-0">
 					{data.navMain.map((item, index) => (
 						<Collapsible
 							key={item.title}
@@ -134,6 +186,16 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
 					))}
 				</SidebarContent>
 				<SidebarRail />
+				<SidebarFooter className="flex items-end">
+					<Button variant="ghost" size="icon" asChild>
+						<Link
+							href="https://github.com/bolander72/stateofbtc.org"
+							target="_blank"
+						>
+							<GithubIcon />
+						</Link>
+					</Button>
+				</SidebarFooter>
 			</Sidebar>
 			<SidebarInset>
 				<header className="flex h-16 shrink-0 items-center gap-2 border-b sticky top-0 bg-background z-50">

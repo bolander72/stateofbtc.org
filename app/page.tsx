@@ -7,13 +7,11 @@ export default function Home() {
 				<h1 className="text-5xl font-bold">State of Bitcoin</h1>
 				<h2 className="text-xl">The annual Bitcoin ecosystem survey</h2>
 			</div>
-			<div className="">
-				<img
-					src="/element.png"
-					alt="element"
-					className="w-auto max-w-md mt-4 dark:invert"
-				/>
-			</div>
+			<img
+				src="/element.png"
+				alt="element"
+				className="w-auto max-w-xs sm:max-w-sm md:max-w-md mt-4 dark:invert"
+			/>
 			<p>
 				Help shape the future of Bitcoin through comprehensive community
 				research. Your voice matters in driving the evolution of the Bitcoin
@@ -36,9 +34,9 @@ export default function Home() {
 				<Button variant="default" asChild>
 					<a href="/survey">Take the Survey</a>
 				</Button>
-				<Button variant="outline" asChild>
+				{/* <Button variant="outline" asChild>
 					<a href="/2023-results">View 2023 Results</a>
-				</Button>
+				</Button> */}
 			</div>
 		</section>
 	);

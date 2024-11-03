@@ -2,7 +2,7 @@ export default function About() {
 	return (
 		<section className="flex flex-col gap-4">
 			<div>
-				<h1 className="text-5xl font-bold">About</h1>
+				<h1 className="text-5xl font-bold">About the site</h1>
 				<h2 className="text-xl">The story behind the survey</h2>
 			</div>
 			<p>
@@ -14,7 +14,7 @@ export default function About() {
 			<p>
 				As a Bitcoin enthusiast and developer, I often found myself searching
 				for the most effective tools and trusted resources in the ecosystem.
-				This personal need, combined with my background in consumer research,
+				This personal need, combined with my background in user research,
 				sparked the idea for a community-driven survey.
 			</p>
 			<p>
