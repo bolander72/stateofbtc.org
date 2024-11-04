@@ -37,7 +37,11 @@ import { Button } from "./ui/button";
 
 type NavItem = {
 	title: string;
-	items: (NavItem & { url: string })[];
+	defaultOpen: boolean;
+	items: {
+		title: string;
+		url: string;
+	}[];
 };
 
 const data = {
@@ -45,6 +49,7 @@ const data = {
 	navMain: [
 		{
 			title: "General",
+			defaultOpen: true,
 			items: [
 				{
 					title: "Home",
@@ -58,6 +63,7 @@ const data = {
 		},
 		{
 			title: "Survey",
+			defaultOpen: true,
 			items: [
 				{
 					title: "Introduction",
@@ -65,47 +71,51 @@ const data = {
 				},
 				{
 					title: "1) Features",
-					url: "/survey/features",
+					url: "/survey/1",
 				},
 				{
 					title: "2) Wallets",
-					url: "/survey/wallets",
+					url: "/survey/2",
 				},
 				{
-					title: "3) Exchanges",
-					url: "/survey/exchanges",
+					title: "3) Exchanges & Fintech",
+					url: "/survey/3",
 				},
 				{
-					title: "4) Layer 2 Solutions",
-					url: "/survey/layers",
+					title: "4) Lightning Network",
+					url: "/survey/4",
 				},
 				{
 					title: "5) Development Tools",
-					url: "/survey/development",
+					url: "/survey/5",
 				},
 				{
 					title: "6) Nodes & Infrastructure",
-					url: "/survey/nodes",
+					url: "/survey/6",
 				},
 				{
-					title: "7) Privacy Tools",
-					url: "/survey/privacy",
+					title: "7) Mining",
+					url: "/survey/7",
 				},
 				{
-					title: "8) Ordinals, Runes, NFTs, & Art",
-					url: "/survey/ordinals",
+					title: "8) Privacy Tools",
+					url: "/survey/8",
 				},
 				{
-					title: "9) Conferences & Community",
-					url: "/survey/conferences",
+					title: "9) Ordinals, Runes, NFTs, Art",
+					url: "/survey/9",
 				},
 				{
-					title: "10) Learning Resources",
-					url: "/survey/learning",
+					title: "10) Conferences & Community",
+					url: "/survey/10",
 				},
 				{
-					title: "11) About You",
-					url: "/survey/about",
+					title: "11) Learning Resources",
+					url: "/survey/11",
+				},
+				{
+					title: "12) About You",
+					url: "/survey/12",
 				},
 				{
 					title: "Conclusion",
@@ -148,11 +158,11 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
 					{/* <SearchForm /> */}
 				</SidebarHeader>
 				<SidebarContent className="gap-0">
-					{data.navMain.map((item, index) => (
+					{data.navMain.map((item) => (
 						<Collapsible
 							key={item.title}
 							title={item.title}
-							defaultOpen={index === 0}
+							defaultOpen={item.defaultOpen}
 							className="group/collapsible"
 						>
 							<SidebarGroup>

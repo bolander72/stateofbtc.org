@@ -2,8 +2,8 @@ export default function About() {
 	return (
 		<section className="flex flex-col gap-4">
 			<div>
-				<h1 className="text-5xl font-bold">About the site</h1>
-				<h2 className="text-xl">The story behind the survey</h2>
+				<h1 className="text-3xl font-bold">About the site</h1>
+				<h2>The story behind the survey</h2>
 			</div>
 			<p>
 				This survey draws inspiration from the highly regarded State of

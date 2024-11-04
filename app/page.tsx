@@ -1,11 +1,12 @@
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 export default function Home() {
 	return (
 		<section className="flex flex-col gap-4">
 			<div>
-				<h1 className="text-5xl font-bold">State of Bitcoin</h1>
-				<h2 className="text-xl">The annual Bitcoin ecosystem survey</h2>
+				<h1 className="text-3xl font-bold">State of Bitcoin</h1>
+				<h2>The annual Bitcoin ecosystem survey</h2>
 			</div>
 			<img
 				src="/element.png"
@@ -30,13 +31,10 @@ export default function Home() {
 			</p>
 			<p>Ready?</p>
 
-			<div className="flex gap-4">
+			<div className="flex gap-4 mt-4">
 				<Button variant="default" asChild>
-					<a href="/survey">Take the Survey</a>
+					<Link href="/survey">Take the Survey</Link>
 				</Button>
-				{/* <Button variant="outline" asChild>
-					<a href="/2023-results">View 2023 Results</a>
-				</Button> */}
 			</div>
 		</section>
 	);
