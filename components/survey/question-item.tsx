@@ -121,7 +121,7 @@ export default function QuestionItem({ id, title, type, options = [] }: Props) {
 									onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) =>
 										updateAnswer({ otherText: e.target.value })
 									}
-									className="max-w-md mt-1.5"
+									className="max-w-md my-2"
 								/>
 							)}
 						</div>
