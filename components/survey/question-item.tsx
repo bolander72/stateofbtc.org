@@ -94,7 +94,7 @@ export default function QuestionItem({ id, title, type, options = [] }: Props) {
 
 	return (
 		<div
-			className={`space-y-4 border rounded-md p-4 text-pretty duration-500 ${getBorderStyle()}`}
+			className={`space-y-4 border rounded-md p-4 text-pretty duration-700 ${getBorderStyle()}`}
 		>
 			<h3 className="font-medium text-lg">{title}</h3>
 
@@ -189,7 +189,10 @@ export default function QuestionItem({ id, title, type, options = [] }: Props) {
 					placeholder="Add your comment here..."
 					value={answer.commentText}
 					onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) =>
-						updateAnswer({ commentText: e.target.value })
+						updateAnswer({
+							commentText: e.target.value,
+							isSkipped: answer.isSkipped,
+						})
 					}
 					className="max-w-md"
 				/>
