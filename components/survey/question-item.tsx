@@ -86,8 +86,11 @@ export default function QuestionItem({ id, title, type, options = [] }: Props) {
 	const getBorderStyle = () => {
 		const hasOtherWithoutText =
 			answer.response.includes("other") && !answer.otherText;
-		return (answer.response.length > 0 && !hasOtherWithoutText) ||
-			answer.isSkipped
+		const hasValidResponse =
+			type === "text"
+				? answer.response[0]?.trim().length > 0
+				: answer.response.length > 0;
+		return (hasValidResponse && !hasOtherWithoutText) || answer.isSkipped
 			? "border-green-600"
 			: "border-border";
 	};

@@ -34,6 +34,7 @@ import {
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { Button } from "./ui/button";
+import survey from "@/surveys/state-of-btc";
 
 type NavItem = {
 	title: string;
@@ -69,54 +70,10 @@ const data = {
 					title: "Introduction",
 					url: "/survey",
 				},
-				{
-					title: "1) Features",
-					url: "/survey/1",
-				},
-				{
-					title: "2) Wallets",
-					url: "/survey/2",
-				},
-				{
-					title: "3) Exchanges & Fintech",
-					url: "/survey/3",
-				},
-				{
-					title: "4) Lightning Network",
-					url: "/survey/4",
-				},
-				{
-					title: "5) Development Tools",
-					url: "/survey/5",
-				},
-				{
-					title: "6) Nodes & Infrastructure",
-					url: "/survey/6",
-				},
-				{
-					title: "7) Mining",
-					url: "/survey/7",
-				},
-				{
-					title: "8) Privacy Tools",
-					url: "/survey/8",
-				},
-				{
-					title: "9) Ordinals, Runes, NFTs, Art",
-					url: "/survey/9",
-				},
-				{
-					title: "10) Conferences & Community",
-					url: "/survey/10",
-				},
-				{
-					title: "11) Learning Resources",
-					url: "/survey/11",
-				},
-				{
-					title: "12) About You",
-					url: "/survey/12",
-				},
+				...survey.sections.map((section, index) => ({
+					title: `${index + 1}) ${section.title}`,
+					url: `/survey/${index + 1}`,
+				})),
 				{
 					title: "Conclusion",
 					url: "/survey/conclusion",

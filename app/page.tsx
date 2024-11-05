@@ -11,7 +11,7 @@ export default function Home() {
 			<img
 				src="/element.png"
 				alt="element"
-				className="w-auto max-w-xs sm:max-w-sm md:max-w-md mt-4 dark:invert"
+				className="w-auto max-w-xs sm:max-w-sm md:max-w-md dark:invert"
 			/>
 			<p>
 				Help shape the future of Bitcoin through comprehensive community
@@ -33,7 +33,7 @@ export default function Home() {
 
 			<div className="flex gap-4 mt-4">
 				<Button variant="default" asChild>
-					<Link href="/survey">Take the Survey</Link>
+					<Link href="/survey">Get Started</Link>
 				</Button>
 			</div>
 		</section>
