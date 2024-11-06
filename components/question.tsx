@@ -1,6 +1,7 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
+import { useSurveyResponse } from "@/hooks/use-survey-response";
 import { Checkbox } from "@/components/ui/checkbox";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Label } from "@/components/ui/label";
@@ -17,14 +18,6 @@ export type Option = {
 	isOther?: boolean;
 };
 
-type Answer = {
-	type: QuestionType;
-	response: string[];
-	otherText: string;
-	commentText: string;
-	isSkipped: boolean;
-};
-
 interface Props {
 	id: string;
 	title: string;
@@ -32,30 +25,9 @@ interface Props {
 	options?: Option[];
 }
 
-export default function QuestionItem({ id, title, type, options = [] }: Props) {
-	const [answer, setAnswer] = useState<Answer>(() => {
-		// Load saved answer from localStorage or use default
-		const saved = localStorage.getItem(`question_${id}`);
-		return saved
-			? JSON.parse(saved)
-			: {
-					type,
-					response: [],
-					otherText: "",
-					commentText: "",
-					isSkipped: false,
-				};
-	});
-	const [showComment, setShowComment] = useState(!!answer.commentText);
-
-	// TODO: use local storage hook
-	useEffect(() => {
-		localStorage.setItem(`question_${id}`, JSON.stringify(answer));
-	}, [answer, id]);
-
-	const updateAnswer = (updates: Partial<Answer>) => {
-		setAnswer((prev) => ({ ...prev, isSkipped: false, ...updates }));
-	};
+export default function Question({ id, title, type, options = [] }: Props) {
+	const [showComment, setShowComment] = useState(false);
+	const { response, updateResponse, isComplete } = useSurveyResponse(id, type);
 
 	const handleCheckboxChange = (optionId: string, checked: boolean) => {
 		const option = options.find((opt) => opt.id === optionId);
@@ -65,34 +37,26 @@ export default function QuestionItem({ id, title, type, options = [] }: Props) {
 				: []
 			: checked
 				? [
-						...answer.response.filter(
-							(id) => !options.find((opt) => opt.id === id)?.isNegative,
+						...response.value.filter(
+							(id: string) => !options.find((opt) => opt.id === id)?.isNegative,
 						),
 						optionId,
 					]
-				: answer.response.filter((id) => id !== optionId);
+				: response.value.filter((id: string) => id !== optionId);
 
-		updateAnswer({ type: "checkbox", response: newResponse });
+		updateResponse({ value: newResponse });
 	};
 
 	const isDisabled = (optionId: string) => {
-		const hasNegativeSelected = answer.response.some(
-			(id) => options.find((opt) => opt.id === id)?.isNegative,
+		const hasNegativeSelected = response.value.some(
+			(id: string) => options.find((opt) => opt.id === id)?.isNegative,
 		);
 		const option = options.find((opt) => opt.id === optionId);
-		return answer.isSkipped || (hasNegativeSelected && !option?.isNegative);
+		return response.isSkipped || (hasNegativeSelected && !option?.isNegative);
 	};
 
 	const getBorderStyle = () => {
-		const hasOtherWithoutText =
-			answer.response.includes("other") && !answer.otherText;
-		const hasValidResponse =
-			type === "text"
-				? answer.response[0]?.trim().length > 0
-				: answer.response.length > 0;
-		return (hasValidResponse && !hasOtherWithoutText) || answer.isSkipped
-			? "border-green-600"
-			: "border-border";
+		return isComplete ? "border-green-600" : "border-border";
 	};
 
 	return (
@@ -108,7 +72,7 @@ export default function QuestionItem({ id, title, type, options = [] }: Props) {
 							<div className="flex items-center space-x-2">
 								<Checkbox
 									id={`${id}-${option.id}`}
-									checked={answer.response.includes(option.id)}
+									checked={response.value.includes(option.id)}
 									disabled={isDisabled(option.id)}
 									onCheckedChange={(checked: boolean) =>
 										handleCheckboxChange(option.id, checked)
@@ -116,13 +80,13 @@ export default function QuestionItem({ id, title, type, options = [] }: Props) {
 								/>
 								<Label htmlFor={`${id}-${option.id}`}>{option.label}</Label>
 							</div>
-							{option.id === "other" && answer.response.includes(option.id) && (
+							{option.isOther && response.value.includes(option.id) && (
 								<Textarea
-									disabled={answer.isSkipped}
+									disabled={!!response.isSkipped}
 									placeholder="Please specify..."
-									value={answer.otherText}
-									onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) =>
-										updateAnswer({ otherText: e.target.value })
+									value={response.otherText}
+									onChange={(e) =>
+										updateResponse({ otherText: e.target.value })
 									}
 									className="max-w-md my-2"
 								/>
@@ -134,18 +98,18 @@ export default function QuestionItem({ id, title, type, options = [] }: Props) {
 
 			{type === "radio" && (
 				<RadioGroup
-					value={answer.response[0]}
+					value={response.value[0]}
 					onValueChange={(value: string) =>
-						updateAnswer({ type: "radio", response: [value] })
+						updateResponse({ type: "radio", value: [value] })
 					}
 				>
 					{options.map((option) => (
 						<div key={option.id} className="flex items-center space-x-2">
 							<RadioGroupItem
-								disabled={answer.isSkipped}
+								disabled={!!response.isSkipped}
 								value={option.id}
 								id={`${id}-${option.id}`}
-								checked={answer.response.includes(option.id)}
+								checked={response.value.includes(option.id)}
 							/>
 							<Label htmlFor={`${id}-${option.id}`}>{option.label}</Label>
 						</div>
@@ -155,11 +119,11 @@ export default function QuestionItem({ id, title, type, options = [] }: Props) {
 
 			{type === "text" && (
 				<Textarea
-					disabled={answer.isSkipped}
+					disabled={!!response.isSkipped}
 					placeholder="Enter your response"
-					value={answer.response[0] || ""}
-					onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) =>
-						updateAnswer({ type: "text", response: [e.target.value] })
+					value={response.value[0] || ""}
+					onChange={(e) =>
+						updateResponse({ type: "text", value: [e.target.value] })
 					}
 					className="max-w-md"
 				/>
@@ -168,7 +132,7 @@ export default function QuestionItem({ id, title, type, options = [] }: Props) {
 			<div className="flex justify-between">
 				<Button
 					variant="outline"
-					disabled={!!answer.commentText}
+					disabled={!!response.commentText}
 					size="sm"
 					onClick={() => setShowComment((prev) => !prev)}
 					className={showComment ? "bg-muted" : ""}
@@ -176,13 +140,11 @@ export default function QuestionItem({ id, title, type, options = [] }: Props) {
 					<MessageSquareIcon className="h-4 w-4" />
 				</Button>
 				<Button
-					variant={answer.isSkipped ? "default" : "outline"}
+					variant={!!response.isSkipped ? "default" : "outline"}
 					size="sm"
-					onClick={() =>
-						setAnswer((prev) => ({ ...prev, isSkipped: !prev.isSkipped }))
-					}
+					onClick={() => updateResponse({ isSkipped: !response.isSkipped })}
 				>
-					{answer.isSkipped ? "Skipped" : "Skip"}{" "}
+					{!!response.isSkipped ? "Skipped" : "Skip"}{" "}
 					<SkipForwardIcon className="h-4 w-4" />
 				</Button>
 			</div>
@@ -190,11 +152,10 @@ export default function QuestionItem({ id, title, type, options = [] }: Props) {
 			{showComment && (
 				<Textarea
 					placeholder="Add your comment here..."
-					value={answer.commentText}
-					onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) =>
-						updateAnswer({
+					value={response.commentText}
+					onChange={(e) =>
+						updateResponse({
 							commentText: e.target.value,
-							isSkipped: answer.isSkipped,
 						})
 					}
 					className="max-w-md"

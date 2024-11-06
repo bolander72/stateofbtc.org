@@ -15,18 +15,26 @@ interface Question {
 }
 
 interface Section {
+	id: string;
 	title: string;
 	description: string;
 	questions: Question[];
 }
 
 interface Survey {
+	id: string;
+	title: string;
+	year: number;
 	sections: Section[];
 }
 
 export default {
+	id: "1",
+	title: "State of Bitcoin",
+	year: 2024,
 	sections: [
 		{
+			id: "1",
 			title: "Features",
 			description: "Usage and experience with Bitcoin protocol features",
 			questions: [
@@ -97,6 +105,7 @@ export default {
 			],
 		},
 		{
+			id: "2",
 			title: "Wallets",
 			description: "Bitcoin wallet preferences and backup practices",
 			questions: [
@@ -186,6 +195,7 @@ export default {
 			],
 		},
 		{
+			id: "3",
 			title: "Exchanges & Fintech",
 			description: "Experience with Bitcoin trading and financial services",
 			questions: [
@@ -285,6 +295,7 @@ export default {
 			],
 		},
 		{
+			id: "4",
 			title: "Lightning Network",
 			description: "Usage of Layer 2 Bitcoin payment solutions",
 			questions: [
@@ -409,6 +420,7 @@ export default {
 			],
 		},
 		{
+			id: "5",
 			title: "Development Tools",
 			description: "Bitcoin development experience and tooling preferences",
 			questions: [
@@ -502,6 +514,7 @@ export default {
 			],
 		},
 		{
+			id: "6",
 			title: "Nodes & Infrastructure",
 			description: "Bitcoin node operation and network participation",
 			questions: [
@@ -605,6 +618,7 @@ export default {
 			],
 		},
 		{
+			id: "7",
 			title: "Mining",
 			description: "Bitcoin mining activities and hardware usage",
 			questions: [
@@ -699,6 +713,7 @@ export default {
 			],
 		},
 		{
+			id: "8",
 			title: "Privacy Tools",
 			description: "Experience with Bitcoin privacy enhancement tools",
 			questions: [
@@ -785,6 +800,7 @@ export default {
 			],
 		},
 		{
+			id: "9",
 			title: "NFTs, Art, & Tokens",
 			description: "Involvement with Bitcoin-based digital assets",
 			questions: [
@@ -899,6 +915,7 @@ export default {
 			],
 		},
 		{
+			id: "10",
 			title: "Conferences & Community",
 			description: "Participation in Bitcoin events and social groups",
 			questions: [
@@ -1005,6 +1022,7 @@ export default {
 			],
 		},
 		{
+			id: "11",
 			title: "Learning Resources",
 			description: "Bitcoin education and knowledge acquisition methods",
 			questions: [
@@ -1071,6 +1089,7 @@ export default {
 			],
 		},
 		{
+			id: "12",
 			title: "About You",
 			description: "Demographics and personal Bitcoin journey details",
 			questions: [

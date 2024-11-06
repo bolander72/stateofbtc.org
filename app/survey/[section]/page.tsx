@@ -1,10 +1,16 @@
-import QuestionItem from "@/components/survey/question-item";
+import Question from "@/components/question";
 import survey from "@/surveys/state-of-btc";
+
+export async function generateStaticParams() {
+	return survey.sections.map((_, index) => ({
+		section: (index + 1).toString(),
+	}));
+}
 
 export default async function Page({
 	params,
 }: {
-	params: { section: string };
+	params: Promise<{ section: string }>;
 }) {
 	const index = Number((await params).section) - 1;
 	const section = survey.sections[Number(index)];
@@ -18,13 +24,7 @@ export default async function Page({
 				<h2>{section.description}</h2>
 			</div>
 			{section.questions.map((question) => (
-				<QuestionItem
-					key={question.id}
-					id={question.id}
-					title={question.title}
-					type={question.type}
-					options={question.options}
-				/>
+				<Question key={question.id} {...question} />
 			))}
 		</div>
 	);
