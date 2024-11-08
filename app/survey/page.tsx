@@ -100,7 +100,7 @@ export default function Home() {
 				needs of the Bitcoin community.
 			</p>
 
-			<div className="flex gap-4 mt-4">
+			<div className="flex gap-4">
 				<Button variant="default" asChild>
 					<Link href="/survey/1">Continue to Survey</Link>
 				</Button>

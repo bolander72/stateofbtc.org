@@ -1,7 +1,7 @@
 "use client";
 
 import * as React from "react";
-import { ChevronRight, GithubIcon } from "lucide-react";
+import { ChevronRight, GithubIcon, TwitterIcon } from "lucide-react";
 import { VersionSwitcher } from "@/components/version-switcher";
 import {
 	Collapsible,
@@ -46,7 +46,23 @@ type NavItem = {
 };
 
 const data = {
-	versions: ["2.11.2024"],
+	versions: [
+		{
+			id: "xykjy2bwbbrnh73fmehdw",
+			name: "State of Bitcoin",
+			isDisabled: false,
+		},
+		{
+			id: "gye7ja79tqi7wrfjhezmy",
+			name: "State of Nostr (coming soon)",
+			isDisabled: true,
+		},
+		{
+			id: "mn9jaba7r846edfd783ep",
+			name: "State of L2s (coming soon)",
+			isDisabled: true,
+		},
+	],
 	navMain: [
 		{
 			title: "General",
@@ -153,13 +169,18 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
 					))}
 				</SidebarContent>
 				<SidebarRail />
-				<SidebarFooter className="flex items-end">
-					<Button variant="ghost" size="icon" asChild>
+				<SidebarFooter className="flex flex-row justify-end items-end border-t">
+					<Button variant="outline" size="icon" asChild>
+						<Link href="https://x.com/bolander72" target="_blank">
+							<TwitterIcon className="!h-5 !w-5" />
+						</Link>
+					</Button>
+					<Button variant="outline" size="icon" asChild>
 						<Link
 							href="https://github.com/bolander72/stateofbtc.org"
 							target="_blank"
 						>
-							<GithubIcon />
+							<GithubIcon className="!h-5 !w-5" />
 						</Link>
 					</Button>
 				</SidebarFooter>

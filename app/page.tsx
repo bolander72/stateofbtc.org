@@ -31,7 +31,7 @@ export default function Home() {
 			</p>
 			<p>Ready?</p>
 
-			<div className="flex gap-4 mt-4">
+			<div className="flex gap-4">
 				<Button variant="default" asChild>
 					<Link href="/survey">Get Started</Link>
 				</Button>
