@@ -1,36 +1,10 @@
-type QuestionType = "checkbox" | "radio" | "text";
-
-interface QuestionOption {
-	id: string;
-	label: string;
-	isOther?: boolean;
-	isNegative?: boolean;
-}
-
-interface Question {
-	id: string;
-	title: string;
-	type: QuestionType;
-	options?: QuestionOption[];
-}
-
-interface Section {
-	id: string;
-	title: string;
-	description: string;
-	questions: Question[];
-}
-
-interface Survey {
-	id: string;
-	title: string;
-	year: number;
-	sections: Section[];
-}
+import { Survey } from "@/surveys/types";
+import { BitcoinIcon } from "lucide-react";
+import { LucideIcon } from "lucide-react";
 
 export default {
 	id: "xykjy2bwbbrnh73fmehdw",
-	title: "State of Bitcoin",
+	title: "Bitcoin Survey",
 	year: 2024,
 	sections: [
 		{

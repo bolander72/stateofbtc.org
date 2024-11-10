@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-import { AppSidebar } from "@/components/app-sidebar";
-import { SidebarProvider } from "@/components/ui/sidebar";
+import { ThemeProvider } from "next-themes";
+import { ViewTransitions } from "next-view-transitions";
+import { NuqsAdapter } from "nuqs/adapters/next/app";
 
 const geistSans = localFont({
 	src: "./fonts/GeistVF.woff",
@@ -26,17 +27,20 @@ export default function RootLayout({
 	children: React.ReactNode;
 }>) {
 	return (
-		<html lang="en">
+		<html lang="en" suppressHydrationWarning>
 			<body
 				className={`${geistSans.variable} ${geistMono.variable} antialiased font-[family-name:var(--font-geist-sans)]`}
 			>
-				<SidebarProvider>
-					<AppSidebar>
-						<main className="transition-[margin] duration-300 ease-in-out p-4 max-w-2xl w-full text-balance">
-							{children}
-						</main>
-					</AppSidebar>
-				</SidebarProvider>
+				<ViewTransitions>
+					<ThemeProvider
+						attribute="class"
+						defaultTheme="system"
+						enableSystem
+						disableTransitionOnChange
+					>
+						<NuqsAdapter>{children}</NuqsAdapter>
+					</ThemeProvider>
+				</ViewTransitions>
 			</body>
 		</html>
 	);

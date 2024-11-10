@@ -1,6 +1,5 @@
 "use client";
 
-import * as React from "react";
 import { Check, ChevronsUpDown, GalleryVerticalEnd } from "lucide-react";
 
 import {
@@ -14,6 +13,8 @@ import {
 	SidebarMenuButton,
 	SidebarMenuItem,
 } from "@/components/ui/sidebar";
+import { useState } from "react";
+import { Link } from "next-view-transitions";
 
 export function VersionSwitcher({
 	versions,
@@ -21,16 +22,16 @@ export function VersionSwitcher({
 }: {
 	versions: {
 		id: string;
-		name: string;
+		title: string;
 		isDisabled: boolean;
 	}[];
 	defaultVersion: {
 		id: string;
-		name: string;
+		title: string;
 		isDisabled: boolean;
 	};
 }) {
-	const [selectedVersion, setSelectedVersion] = React.useState(defaultVersion);
+	const [selectedVersion, setSelectedVersion] = useState(defaultVersion);
 
 	return (
 		<SidebarMenu>
@@ -41,11 +42,11 @@ export function VersionSwitcher({
 							size="lg"
 							className="data-[state=open]:bg-sidebar-accent data-[state=open]:text-sidebar-accent-foreground"
 						>
-							<div className="flex aspect-square size-8 items-center justify-center rounded-lg bg-sidebar-primary text-sidebar-primary-foreground">
+							<div className="flex aspect-square size-8 items-center justify-center rounded-lg bg-primary text-secondary">
 								<GalleryVerticalEnd className="size-4" />
 							</div>
 							<div className="flex flex-col gap-0.5 leading-none">
-								<span className="font-semibold">{selectedVersion.name}</span>
+								<span className="font-semibold">{selectedVersion.title}</span>
 								<span className="text-xs">
 									id: {selectedVersion.id.slice(0, 6)}...
 									{selectedVersion.id.slice(-3)}
@@ -61,13 +62,19 @@ export function VersionSwitcher({
 						{versions.map((version) => (
 							<DropdownMenuItem
 								key={version.id}
-								onSelect={() => setSelectedVersion(version)}
+								onSelect={() => {
+									setSelectedVersion(version);
+								}}
 								disabled={version.isDisabled}
+								asChild
+								className="cursor-pointer"
 							>
-								{version.name}{" "}
-								{version.id === selectedVersion.id && (
-									<Check className="ml-auto" />
-								)}
+								<Link href={`/${selectedVersion.id}`}>
+									{version.title}{" "}
+									{version.id === selectedVersion.id && (
+										<Check className="ml-auto" />
+									)}
+								</Link>
 							</DropdownMenuItem>
 						))}
 					</DropdownMenuContent>

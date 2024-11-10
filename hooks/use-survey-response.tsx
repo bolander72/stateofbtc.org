@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useStore } from "@/components/providers/store-provider";
+import { useParams } from "next/navigation";
 
 export type QuestionType = "checkbox" | "radio" | "text";
 
@@ -11,7 +12,9 @@ export type Option = {
 };
 
 export type SurveyResponse = {
-	id: string;
+	surveyId: string;
+	sectionId: string;
+	questionId: string;
 	type: QuestionType;
 	value: string[];
 	otherText: string;
@@ -20,11 +23,14 @@ export type SurveyResponse = {
 	isOther?: boolean;
 };
 
-export function useSurveyResponse(id: string, type: QuestionType) {
+export function useSurveyResponse(questionId: string, type: QuestionType) {
 	const store = useStore();
+	const params = useParams();
 
 	const getDefaultValue = (): SurveyResponse => ({
-		id,
+		surveyId: params.surveyId as string,
+		sectionId: params.sectionId as string,
+		questionId,
 		type,
 		value: [],
 		otherText: "",
@@ -52,7 +58,7 @@ export function useSurveyResponse(id: string, type: QuestionType) {
 	};
 
 	const [response, setResponse] = useState<SurveyResponse>(() => {
-		const stored = store?.getRow("responses", id);
+		const stored = store?.getRow("responses", questionId);
 		return parseStoredResponse(stored || getDefaultValue());
 	});
 
@@ -66,13 +72,11 @@ export function useSurveyResponse(id: string, type: QuestionType) {
 
 		setResponse(newResponse);
 
-		store.setPartialRow("responses", id, {
+		store.setPartialRow("responses", questionId, {
 			...newResponse,
 			value: JSON.stringify(newResponse.value),
 		});
 	};
-
-	console.log("response", response);
 
 	return {
 		response,

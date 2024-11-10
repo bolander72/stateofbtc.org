@@ -1,7 +1,7 @@
 "use client";
 
 import * as React from "react";
-import { ChevronRight, GithubIcon, TwitterIcon } from "lucide-react";
+import { ChevronRight } from "lucide-react";
 import { VersionSwitcher } from "@/components/version-switcher";
 import {
 	Collapsible,
@@ -31,10 +31,12 @@ import {
 	BreadcrumbSeparator,
 	BreadcrumbPage,
 } from "./ui/breadcrumb";
-import { usePathname } from "next/navigation";
-import Link from "next/link";
+import { useParams, usePathname } from "next/navigation";
+import { Link } from "next-view-transitions";
 import { Button } from "./ui/button";
-import survey from "@/surveys/state-of-btc";
+import survey from "@/surveys/bitcoin/2024";
+import { currentSurveysMetadata } from "@/surveys";
+import ThemeToggle from "./theme-toggle";
 
 type NavItem = {
 	title: string;
@@ -43,60 +45,6 @@ type NavItem = {
 		title: string;
 		url: string;
 	}[];
-};
-
-const data = {
-	versions: [
-		{
-			id: "xykjy2bwbbrnh73fmehdw",
-			name: "State of Bitcoin",
-			isDisabled: false,
-		},
-		{
-			id: "gye7ja79tqi7wrfjhezmy",
-			name: "State of Nostr (coming soon)",
-			isDisabled: true,
-		},
-		{
-			id: "mn9jaba7r846edfd783ep",
-			name: "State of L2s (coming soon)",
-			isDisabled: true,
-		},
-	],
-	navMain: [
-		{
-			title: "General",
-			defaultOpen: true,
-			items: [
-				{
-					title: "Home",
-					url: "/",
-				},
-				{
-					title: "About",
-					url: "/about",
-				},
-			],
-		},
-		{
-			title: "Survey",
-			defaultOpen: true,
-			items: [
-				{
-					title: "Introduction",
-					url: "/survey",
-				},
-				...survey.sections.map((section, index) => ({
-					title: `${index + 1}) ${section.title}`,
-					url: `/survey/${index + 1}`,
-				})),
-				{
-					title: "Conclusion",
-					url: "/survey/conclusion",
-				},
-			],
-		},
-	] as NavItem[],
 };
 
 function findBreadcrumbPath(
@@ -118,6 +66,42 @@ function findBreadcrumbPath(
 
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
 	const pathname = usePathname();
+	const params = useParams();
+
+	const data = {
+		versions: [...currentSurveysMetadata],
+		navMain: [
+			{
+				title: "General",
+				defaultOpen: true,
+				items: [
+					{
+						title: "Home",
+						url: `/${params.surveyId}`,
+					},
+					{
+						title: "About",
+						url: `/${params.surveyId}/about`,
+					},
+				],
+			},
+			{
+				title: "Survey Sections",
+				defaultOpen: true,
+				items: [
+					...survey.sections.map((section, index) => ({
+						title: `${index + 1}) ${section.title}`,
+						url: `/${params.surveyId}/${section.id}`,
+					})),
+					{
+						title: "Review",
+						url: `/${params.surveyId}/review`,
+					},
+				],
+			},
+		] as NavItem[],
+	};
+
 	const breadcrumbInfo = findBreadcrumbPath(data.navMain, pathname);
 
 	return (
@@ -169,20 +153,39 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
 					))}
 				</SidebarContent>
 				<SidebarRail />
-				<SidebarFooter className="flex flex-row justify-end items-end border-t">
-					<Button variant="outline" size="icon" asChild>
-						<Link href="https://x.com/bolander72" target="_blank">
-							<TwitterIcon className="!h-5 !w-5" />
-						</Link>
-					</Button>
-					<Button variant="outline" size="icon" asChild>
-						<Link
-							href="https://github.com/bolander72/stateofbtc.org"
-							target="_blank"
-						>
-							<GithubIcon className="!h-5 !w-5" />
-						</Link>
-					</Button>
+				<SidebarFooter className="flex flex-row justify-between items-end border-t">
+					<ThemeToggle />
+					<div>
+						<Button variant="outline" size="icon" asChild>
+							<Link href="https://x.com/bolander72" target="_blank">
+								<svg
+									role="img"
+									viewBox="0 0 24 24"
+									xmlns="http://www.w3.org/2000/svg"
+									className="fill-primary"
+								>
+									<title>X</title>
+									<path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z" />
+								</svg>
+							</Link>
+						</Button>
+						<Button variant="outline" size="icon" asChild>
+							<Link
+								href="https://github.com/bolander72/stateofbtc.org"
+								target="_blank"
+							>
+								<svg
+									role="img"
+									viewBox="0 0 24 24"
+									xmlns="http://www.w3.org/2000/svg"
+									className="fill-primary"
+								>
+									<title>GitHub</title>
+									<path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
+								</svg>
+							</Link>
+						</Button>
+					</div>
 				</SidebarFooter>
 			</Sidebar>
 			<SidebarInset>
