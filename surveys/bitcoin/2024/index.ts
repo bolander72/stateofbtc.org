@@ -1,6 +1,4 @@
 import { Survey } from "@/surveys/types";
-import { BitcoinIcon } from "lucide-react";
-import { LucideIcon } from "lucide-react";
 
 export default {
 	id: "xykjy2bwbbrnh73fmehdw",
