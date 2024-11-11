@@ -1,7 +1,7 @@
 "use client";
 
 import * as React from "react";
-import { ChevronRight } from "lucide-react";
+import { ArrowLeftFromLineIcon, ChevronRight } from "lucide-react";
 import { VersionSwitcher } from "@/components/version-switcher";
 import {
 	Collapsible,
@@ -154,8 +154,12 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
 				</SidebarContent>
 				<SidebarRail />
 				<SidebarFooter className="flex flex-row justify-between items-end border-t">
-					<ThemeToggle />
-					<div>
+					<Button size="icon" variant="outline" asChild>
+						<Link href="/">
+							<ArrowLeftFromLineIcon />
+						</Link>
+					</Button>
+					<div className="space-x-1.5">
 						<Button variant="outline" size="icon" asChild>
 							<Link href="https://x.com/bolander72" target="_blank">
 								<svg
@@ -186,6 +190,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
 							</Link>
 						</Button>
 					</div>
+					<ThemeToggle />
 				</SidebarFooter>
 			</Sidebar>
 			<SidebarInset>

@@ -56,6 +56,9 @@ export default async function Page({
 				<Button variant="default" asChild>
 					<Link href={`/${surveyId}/${firstSection.id}`}>Get Started</Link>
 				</Button>
+				<Button variant="secondary" asChild>
+					<Link href={`/${surveyId}/about`}>Read More</Link>
+				</Button>
 			</div>
 		</section>
 	);
