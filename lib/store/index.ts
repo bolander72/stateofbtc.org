@@ -45,6 +45,7 @@ export async function getStore(surveyId: string) {
 	} catch (error) {
 		console.error("Failed to initialize a persister:", error);
 		console.warn("Data will not persist between page reloads");
+		throw error;
 	}
 
 	return store;

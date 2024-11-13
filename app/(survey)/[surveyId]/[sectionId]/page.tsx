@@ -39,53 +39,51 @@ export default async function Page({
 			: null;
 
 	return (
-		<StoreProvider surveyId={surveyId}>
-			<div className="space-y-4">
-				<div>
-					<h1 className="text-3xl font-bold">{section.title}</h1>
-					<h2>{section.description}</h2>
-				</div>
-
-				<div className="flex justify-between">
-					{prevSection && (
-						<Button asChild variant="secondary">
-							<Link
-								href={`/${surveyId}/${prevSection.id}`}
-								className="flex items-center"
-							>
-								<ArrowLeftIcon className="h-4 w-4" />
-								{prevSection.title}
-							</Link>
-						</Button>
-					)}
-				</div>
-
-				{section.questions.map((question) => (
-					<Question key={question.id} {...question} />
-				))}
-
-				<div className="flex justify-between mt-8">
-					<div />
-					{nextSection ? (
-						<Button asChild variant="secondary">
-							<Link
-								href={`/${surveyId}/${nextSection.id}`}
-								className="flex items-center"
-							>
-								{nextSection.title}
-								<ArrowRightIcon className="h-4 w-4" />
-							</Link>
-						</Button>
-					) : (
-						<Button asChild variant="secondary">
-							<Link href={`/${surveyId}/review`} className="flex items-center">
-								Review
-								<ArrowRightIcon className="h-4 w-4" />
-							</Link>
-						</Button>
-					)}
-				</div>
+		<div className="space-y-4">
+			<div>
+				<h1 className="text-3xl font-bold">{section.title}</h1>
+				<h2>{section.description}</h2>
 			</div>
-		</StoreProvider>
+
+			<div className="flex justify-between">
+				{prevSection && (
+					<Button asChild variant="secondary">
+						<Link
+							href={`/${surveyId}/${prevSection.id}`}
+							className="flex items-center"
+						>
+							<ArrowLeftIcon className="h-4 w-4" />
+							{prevSection.title}
+						</Link>
+					</Button>
+				)}
+			</div>
+
+			{section.questions.map((question) => (
+				<Question key={question.id} {...question} />
+			))}
+
+			<div className="flex justify-between mt-8">
+				<div />
+				{nextSection ? (
+					<Button asChild variant="secondary">
+						<Link
+							href={`/${surveyId}/${nextSection.id}`}
+							className="flex items-center"
+						>
+							{nextSection.title}
+							<ArrowRightIcon className="h-4 w-4" />
+						</Link>
+					</Button>
+				) : (
+					<Button asChild variant="secondary">
+						<Link href={`/${surveyId}/review`} className="flex items-center">
+							Review
+							<ArrowRightIcon className="h-4 w-4" />
+						</Link>
+					</Button>
+				)}
+			</div>
+		</div>
 	);
 }

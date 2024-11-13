@@ -3,26 +3,35 @@
 import { createContext, useContext, useEffect, useState } from "react";
 import { Store } from "tinybase";
 import { getStore } from "@/lib/store";
+import { useParams } from "next/navigation";
 
-const StoreContext = createContext<Store | null>(null);
+interface Value {
+	store: Store;
+	autosaving: boolean;
+	setAutosaving: (autosaving: boolean) => void;
+}
 
-export function StoreProvider({
-	surveyId,
-	children,
-}: {
-	surveyId: string;
-	children: React.ReactNode;
-}) {
+const StoreContext = createContext<Value>({} as Value);
+
+export function StoreProvider({ children }: { children: React.ReactNode }) {
+	const params = useParams();
 	const [store, setStore] = useState<Store | null>(null);
+	const [autosaving, setAutosaving] = useState(true);
 
 	useEffect(() => {
-		getStore(surveyId).then(setStore);
-	}, [surveyId]);
+		getStore(params.surveyId as string)
+			.then(setStore)
+			.catch(() => {
+				setAutosaving(false);
+			});
+	}, [params.surveyId]);
 
 	if (!store) return null;
 
 	return (
-		<StoreContext.Provider value={store}>{children}</StoreContext.Provider>
+		<StoreContext.Provider value={{ store, autosaving, setAutosaving }}>
+			{children}
+		</StoreContext.Provider>
 	);
 }
 

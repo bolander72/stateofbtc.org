@@ -1,4 +1,5 @@
 import { AppSidebar } from "@/components/app-sidebar";
+import { StoreProvider } from "@/components/providers/store-provider";
 import { SidebarProvider } from "@/components/ui/sidebar";
 import { NuqsAdapter } from "nuqs/adapters/next/app";
 
@@ -9,13 +10,15 @@ export default function AppLayout({
 }>) {
 	return (
 		<NuqsAdapter>
-			<SidebarProvider>
-				<AppSidebar>
-					<main className="transition-[margin] duration-300 ease-in-out p-4 max-w-2xl w-full text-balance">
-						{children}
-					</main>
-				</AppSidebar>
-			</SidebarProvider>
+			<StoreProvider>
+				<SidebarProvider>
+					<AppSidebar>
+						<main className="transition-[margin] duration-300 ease-in-out p-4 max-w-2xl w-full text-balance">
+							{children}
+						</main>
+					</AppSidebar>
+				</SidebarProvider>
+			</StoreProvider>
 		</NuqsAdapter>
 	);
 }

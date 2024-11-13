@@ -24,7 +24,7 @@ export type SurveyResponse = {
 };
 
 export function useSurveyResponse(questionId: string, type: QuestionType) {
-	const store = useStore();
+	const { store } = useStore();
 	const params = useParams();
 
 	const getDefaultValue = (): SurveyResponse => ({
