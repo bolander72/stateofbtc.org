@@ -137,6 +137,10 @@ export default {
 							label: "Software Wallet (e.g., Sparrow, Electrum)",
 						},
 						{
+							id: "TODO",
+							label: "Hardware Wallet (e.g., Leather, Xverse)",
+						},
+						{
 							id: "4gzztxqmwya4dywiyfamd",
 							label: "Mobile Wallet (e.g., BlueWallet, Muun)",
 						},
@@ -214,6 +218,24 @@ export default {
 					],
 				},
 				{
+                    id: "TODO",
+                    title: "Which browser wallets have you used?",
+                    type: "checkbox",
+                    options: [
+                        { id: "", label: "Leather" },
+                        { id: "", label: "Unisat" },
+                        { id: "", label: "MagicEden" },
+                        { id: "", label: "Xverse" },
+                        { id: "", label: "Phantom" },
+                        { id: "TODO", label: "Other", isOther: true },
+                        {
+                            id: "TODO",
+                            label: "None of the above",
+                            isNegative: true,
+                        },
+                    ],
+                },
+				{
 					id: "de7ma42xdj7wrzfytwhwz",
 					title: "How important is multisig support when choosing a wallet?",
 					type: "radio",
@@ -237,6 +259,10 @@ export default {
 						{
 							id: "63t86tx3f74jkwzx92qi9",
 							label: "Digital backup (e.g., encrypted file)",
+						},
+						{
+							id: "TODO",
+							label: "Key shard sharing (e.g., Shamir's secret sharing)",
 						},
 						{ id: "4888bj6gdm82gfqgjrdaz", label: "Other", isOther: true },
 						{
