@@ -1308,6 +1308,7 @@ export default {
 						{ id: "k92xqxgiqxixgte3m9pnx", label: "The Daily Bit" },
 						{ id: "h8p46mpraxz3ktimfqam6", label: "Marty's Bent" },
 						{ id: "kc8i28qaqwdnrrfn8xfqn", label: "Bitcoin Magazine Pro" },
+						{ id: "TODO", label: "Blockspace Media" },
 						{ id: "kk33xkqremhzcmbgdahiq", label: "Other", isOther: true },
 						{
 							id: "hbmd2t9hxdiamim4cezg3",
@@ -1332,6 +1333,7 @@ export default {
 						{ id: "kdmw9gmhycfrp2eqmgpry", label: "Stephan Livera Podcast" },
 						{ id: "xkicf73z3khjzi9n9n9nb", label: "Bitcoin Magazine Podcast" },
 						{ id: "rernrr2timaznbt82bekm", label: "The Mempool" },
+						{ id: "TODO", label: "The Mining Pod" },
 						{ id: "pkdrr7n9t6jdw8jqwin2j", label: "Other", isOther: true },
 						{
 							id: "pr6qezqnctktg4ny3fen9",
