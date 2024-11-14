@@ -1144,6 +1144,10 @@ export default {
 						{ id: "bm7njfxq26e4hixppd94a", label: "Quantum Cats" },
 						{ id: "ecbbjr6etc343q3rtd386", label: "Ordinals Community" },
 						{ id: "e3fanatfqqtanwaewdf4w", label: "Counterparty Community" },
+						{ id: "TODO", label: "Bitcoin Wizards" },
+						{ id: "TODO", label: "Node Monkes" },
+						{ id: "TODO", label: "Bitcoin Puppets" },
+						{ id: "TODO", label: "Ordinal Maxi Business (OMB)" },
 						{ id: "tpm4he6h42f7k3e7rhnec", label: "Other", isOther: true },
 						{
 							id: "89mhiywewc6wyi7dew6yh",
