@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { surveys } from "@/surveys";
 import { Link } from "next-view-transitions";
-import NotFound from "./not-found";
+import { notFound } from "next/navigation";
 
 export async function generateStaticParams() {
 	return surveys.map(({ id }) => ({
@@ -20,7 +20,7 @@ export default async function Page({
 	const firstSection = survey?.sections[0];
 
 	if (!survey || !firstSection) {
-		return NotFound();
+		return notFound();
 	}
 
 	return (

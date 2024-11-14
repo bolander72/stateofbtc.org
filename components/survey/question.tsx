@@ -8,6 +8,7 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { MessageSquareIcon, SkipForwardIcon } from "lucide-react";
+import { cn } from "@/lib/utils";
 
 export type QuestionType = "checkbox" | "radio" | "text";
 
@@ -56,12 +57,15 @@ export default function Question({ id, title, type, options = [] }: Props) {
 	};
 
 	const getBorderStyle = () => {
-		return isComplete ? "border-green-600" : "border-border";
+		return isComplete
+			? "border-green-700 dark:border-green-600"
+			: "border-border";
 	};
 
 	return (
 		<div
 			className={`space-y-4 border rounded-md p-4 text-pretty duration-700 ${getBorderStyle()}`}
+			id={id}
 		>
 			<h3 className="font-medium text-lg">{title}</h3>
 
@@ -111,7 +115,12 @@ export default function Question({ id, title, type, options = [] }: Props) {
 								id={`${id}-${option.id}`}
 								checked={response.value.includes(option.id)}
 							/>
-							<Label htmlFor={`${id}-${option.id}`}>{option.label}</Label>
+							<Label
+								htmlFor={`${id}-${option.id}`}
+								className={cn(!!response.isSkipped && "opacity-70")}
+							>
+								{option.label}
+							</Label>
 						</div>
 					))}
 				</RadioGroup>

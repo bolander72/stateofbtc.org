@@ -2,7 +2,7 @@
 
 import * as React from "react";
 import { ArrowLeftFromLineIcon, ChevronRight } from "lucide-react";
-import { VersionSwitcher } from "@/components/version-switcher";
+import { VersionSwitcher } from "@/components/sidebar/version-switcher";
 import {
 	Collapsible,
 	CollapsibleContent,
@@ -30,16 +30,16 @@ import {
 	BreadcrumbItem,
 	BreadcrumbSeparator,
 	BreadcrumbPage,
-} from "./ui/breadcrumb";
+} from "../ui/breadcrumb";
 import { useParams, usePathname } from "next/navigation";
 import { Link } from "next-view-transitions";
-import { Button } from "./ui/button";
+import { Button } from "../ui/button";
 import survey from "@/surveys/bitcoin/2024";
 import { currentSurveysMetadata } from "@/surveys";
-import ThemeToggle from "./theme-toggle";
-import { useStore } from "./providers/store-provider";
+import ThemeToggle from "../theme-toggle";
+import { useStore } from "../providers/store-provider";
 import { cn } from "@/lib/utils";
-import { Popover, PopoverContent, PopoverTrigger } from "./ui/popover";
+import { Popover, PopoverContent, PopoverTrigger } from "../ui/popover";
 
 type NavItem = {
 	title: string;
@@ -204,7 +204,9 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
 								<span
 									className={cn(
 										"animate-pulse h-2 w-2 rounded-full opacity-75",
-										autosaving ? "bg-green-600" : "bg-red-600",
+										autosaving
+											? "bg-green-700 dark:bg-green-600"
+											: "bg-red-700 dark:bg-red-600",
 									)}
 								></span>
 							</Button>

@@ -1,10 +1,9 @@
-import NotFound from "@/app/(survey)/[surveyId]/not-found";
-import { StoreProvider } from "@/components/providers/store-provider";
-import Question from "@/components/question";
+import Question from "@/components/survey/question";
 import { Button } from "@/components/ui/button";
 import { surveys } from "@/surveys";
 import { ArrowLeftIcon, ArrowRightIcon } from "lucide-react";
 import { Link } from "next-view-transitions";
+import { notFound } from "next/navigation";
 
 export async function generateStaticParams() {
 	return surveys.flatMap((survey) =>
@@ -27,7 +26,7 @@ export default async function Page({
 	);
 
 	if (!survey || sectionIndex === undefined || sectionIndex === -1) {
-		return NotFound();
+		return notFound();
 	}
 
 	const section = survey.sections[sectionIndex]!;
