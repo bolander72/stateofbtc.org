@@ -1,6 +1,3 @@
-import { LucideIcon } from "lucide-react";
-import { ReactNode } from "react";
-
 type QuestionType = "checkbox" | "radio" | "text";
 
 interface QuestionOption {

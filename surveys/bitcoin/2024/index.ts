@@ -137,6 +137,10 @@ export default {
 							label: "Software Wallet (e.g., Sparrow, Electrum)",
 						},
 						{
+							id: "kcwthbayqf4yp2hm3yj4e",
+							label: "Hardware Wallet (e.g., Leather, Xverse)",
+						},
+						{
 							id: "4gzztxqmwya4dywiyfamd",
 							label: "Mobile Wallet (e.g., BlueWallet, Muun)",
 						},
@@ -214,6 +218,24 @@ export default {
 					],
 				},
 				{
+					id: "ttq9jr4zffzzgiqiz699t",
+					title: "Which browser wallets have you used?",
+					type: "checkbox",
+					options: [
+						{ id: "y6f47mapbp74iy2xwrzcz", label: "Leather" },
+						{ id: "74kjwz3r9ncq7j2qrzg9q", label: "Unisat" },
+						{ id: "riccmajckakabc9w7n9rf", label: "MagicEden" },
+						{ id: "g7g8x8eajqf8ibb83wagn", label: "Xverse" },
+						{ id: "fchenapkfpdyazgzr2i7g", label: "Phantom" },
+						{ id: "mwqdw4ekm8tkddhqcjmny", label: "Other", isOther: true },
+						{
+							id: "ahrthh7j8i4kw9xchja72",
+							label: "None of the above",
+							isNegative: true,
+						},
+					],
+				},
+				{
 					id: "de7ma42xdj7wrzfytwhwz",
 					title: "How important is multisig support when choosing a wallet?",
 					type: "radio",
@@ -237,6 +259,10 @@ export default {
 						{
 							id: "63t86tx3f74jkwzx92qi9",
 							label: "Digital backup (e.g., encrypted file)",
+						},
+						{
+							id: "tr6rcbdajx7efrhgpi9eg",
+							label: "Key shard sharing (e.g., Shamir's secret sharing)",
 						},
 						{ id: "4888bj6gdm82gfqgjrdaz", label: "Other", isOther: true },
 						{
@@ -1118,6 +1144,13 @@ export default {
 						{ id: "bm7njfxq26e4hixppd94a", label: "Quantum Cats" },
 						{ id: "ecbbjr6etc343q3rtd386", label: "Ordinals Community" },
 						{ id: "e3fanatfqqtanwaewdf4w", label: "Counterparty Community" },
+						{ id: "c63tmynfgpb7bqmj3n339", label: "Bitcoin Wizards" },
+						{ id: "zk499pjiabb8m2kcwzbqp", label: "Node Monkes" },
+						{ id: "atawtdhydnnrxwm6kyt3z", label: "Bitcoin Puppets" },
+						{
+							id: "yjktk77p66gxn99mibdga",
+							label: "Ordinal Maxi Business (OMB)",
+						},
 						{ id: "tpm4he6h42f7k3e7rhnec", label: "Other", isOther: true },
 						{
 							id: "89mhiywewc6wyi7dew6yh",
@@ -1214,6 +1247,10 @@ export default {
 							id: "ib3azbw2h89xcex2rprpg",
 							label: "Advancing Bitcoin (London)",
 						},
+						{
+							id: "t34zwj2pmbjwqyrn4cxcd",
+							label: "OP_NEXT",
+						},
 						{ id: "ppr2didwm8pf9939ebqar", label: "Other", isOther: true },
 						{
 							id: "3mqc6w49ijxxmg2gwhrcq",
@@ -1274,6 +1311,7 @@ export default {
 						{ id: "k92xqxgiqxixgte3m9pnx", label: "The Daily Bit" },
 						{ id: "h8p46mpraxz3ktimfqam6", label: "Marty's Bent" },
 						{ id: "kc8i28qaqwdnrrfn8xfqn", label: "Bitcoin Magazine Pro" },
+						{ id: "728pbf2z2983m9wze7czh", label: "Blockspace Media" },
 						{ id: "kk33xkqremhzcmbgdahiq", label: "Other", isOther: true },
 						{
 							id: "hbmd2t9hxdiamim4cezg3",
@@ -1298,6 +1336,7 @@ export default {
 						{ id: "kdmw9gmhycfrp2eqmgpry", label: "Stephan Livera Podcast" },
 						{ id: "xkicf73z3khjzi9n9n9nb", label: "Bitcoin Magazine Podcast" },
 						{ id: "rernrr2timaznbt82bekm", label: "The Mempool" },
+						{ id: "mejrce8zdibt7xw98n423", label: "The Mining Pod" },
 						{ id: "pkdrr7n9t6jdw8jqwin2j", label: "Other", isOther: true },
 						{
 							id: "pr6qezqnctktg4ny3fen9",
