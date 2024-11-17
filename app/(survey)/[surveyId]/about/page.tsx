@@ -1,8 +1,10 @@
-import { surveys } from "@/surveys";
+import { getSurveyMetadata } from "@/db/queries";
 
 export async function generateStaticParams() {
-	return surveys.map(({ id }) => ({
-		surveyId: id,
+	const surveys = await getSurveyMetadata();
+
+	return surveys.map(({ _id }) => ({
+		surveyId: String(_id),
 	}));
 }
 

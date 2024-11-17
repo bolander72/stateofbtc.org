@@ -1,11 +1,13 @@
 import { Button } from "@/components/ui/button";
-import { surveys } from "@/surveys";
+import { getSurveyMetadata } from "@/db/queries";
 import { Link } from "next-view-transitions";
 import { notFound } from "next/navigation";
 
 export async function generateStaticParams() {
-	return surveys.map(({ id }) => ({
-		surveyId: id,
+	const surveys = await getSurveyMetadata();
+
+	return surveys.map(({ _id }) => ({
+		surveyId: String(_id),
 	}));
 }
 
@@ -16,10 +18,14 @@ export default async function Page({
 }) {
 	const { surveyId } = await params;
 
-	const survey = surveys.find((survey) => survey.id === surveyId);
-	const firstSection = survey?.sections[0];
+	const surveys = await getSurveyMetadata({
+		_id: surveyId,
+		withSectionMetadata: true,
+	});
 
-	if (!survey || !firstSection) {
+	const firstSection = surveys[0]?.sections[0];
+
+	if (!surveys || !firstSection) {
 		return notFound();
 	}
 
@@ -54,7 +60,7 @@ export default async function Page({
 
 			<div className="flex gap-4">
 				<Button variant="default" asChild>
-					<Link href={`/${surveyId}/${firstSection.id}`}>Get Started</Link>
+					<Link href={`/${surveyId}/${firstSection?._id}`}>Get Started</Link>
 				</Button>
 				<Button variant="secondary" asChild>
 					<Link href={`/${surveyId}/about`}>Read More</Link>

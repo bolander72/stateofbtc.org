@@ -34,12 +34,11 @@ import {
 import { useParams, usePathname } from "next/navigation";
 import { Link } from "next-view-transitions";
 import { Button } from "../ui/button";
-import survey from "@/surveys/bitcoin/2024";
-import { currentSurveysMetadata } from "@/surveys";
 import ThemeToggle from "../theme-toggle";
 import { useStore } from "../providers/store-provider";
 import { cn } from "@/lib/utils";
 import { Popover, PopoverContent, PopoverTrigger } from "../ui/popover";
+import { ISurvey } from "@/db/models/types";
 
 type NavItem = {
 	title: string;
@@ -67,13 +66,23 @@ function findBreadcrumbPath(
 	return null;
 }
 
-export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
+type AppSidebarProps = React.ComponentProps<typeof Sidebar> & {
+	surveys?: ISurvey[];
+};
+
+export function AppSidebar({ surveys, ...props }: AppSidebarProps) {
 	const { autosaving } = useStore();
 	const pathname = usePathname();
 	const params = useParams();
 
+	const versions = surveys?.map((survey) => ({
+		id: String(survey._id),
+		title: survey.title,
+		isDisabled: !survey.isActive,
+	}));
+
 	const data = {
-		versions: [...currentSurveysMetadata],
+		versions: [...(versions ?? [])],
 		navMain: [
 			{
 				title: "General",
@@ -93,10 +102,12 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
 				title: "Survey Sections",
 				defaultOpen: true,
 				items: [
-					...survey.sections.map((section, index) => ({
-						title: `${index + 1}) ${section.title}`,
-						url: `/${params.surveyId}/${section.id}`,
-					})),
+					...(surveys
+						?.find((survey) => survey._id === params.surveyId)
+						?.sections?.map((section, index) => ({
+							title: `${index + 1}) ${section.title}`,
+							url: `/${params.surveyId}/${section._id}`,
+						})) || []),
 					{
 						title: "Review",
 						url: `/${params.surveyId}/review`,

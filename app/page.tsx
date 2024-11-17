@@ -1,8 +1,15 @@
 import { Button } from "@/components/ui/button";
-import { surveys } from "@/surveys";
+import { getSurveyMetadata } from "@/db/queries";
 import { Link } from "next-view-transitions";
 
-export default function Home() {
+export default async function Home() {
+	const surveys = await getSurveyMetadata();
+	let defaultSurvey = surveys.find((survey) => survey.isDefault);
+
+	if (!defaultSurvey) {
+		defaultSurvey = surveys[0];
+	}
+
 	return (
 		<section className="flex p-4 flex-col min-h-[100dvh] items-center justify-center space-y-2">
 			<div className="space-y-2">
@@ -14,7 +21,7 @@ export default function Home() {
 				/>
 				<div className="flex justify-end">
 					<Button variant="default" type="button" asChild>
-						<Link href={`/${surveys[0].id}`}>Enter</Link>
+						<Link href={`/${defaultSurvey._id}`}>Enter</Link>
 					</Button>
 				</div>
 			</div>

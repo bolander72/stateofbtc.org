@@ -1,10 +1,12 @@
-import { surveys } from "@/surveys";
 import Review from "@/components/survey/review";
 import { notFound } from "next/navigation";
+import { getSurveyMetadata } from "@/db/queries";
 
 export async function generateStaticParams() {
-	return surveys.map(({ id }) => ({
-		surveyId: id,
+	const surveys = await getSurveyMetadata();
+
+	return surveys.map(({ _id }) => ({
+		surveyId: String(_id),
 	}));
 }
 
@@ -14,7 +16,8 @@ export default async function Page({
 	params: Promise<{ surveyId: string }>;
 }) {
 	const { surveyId } = await params;
-	const survey = surveys.find((survey) => survey.id === surveyId);
+	const surveys = await getSurveyMetadata();
+	const survey = surveys.find((survey) => String(survey._id) === surveyId);
 
 	if (!survey) {
 		return notFound();

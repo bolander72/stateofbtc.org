@@ -9,29 +9,25 @@ import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { MessageSquareIcon, SkipForwardIcon } from "lucide-react";
 import { cn } from "@/lib/utils";
-
-export type QuestionType = "checkbox" | "radio" | "text";
-
-export type Option = {
-	id: string;
-	label: string;
-	isNegative?: boolean;
-	isOther?: boolean;
-};
+import { IQuestion, IQuestionOption } from "@/db/models/types";
+import { ObjectId } from "mongoose";
 
 interface Props {
-	id: string;
+	_id: ObjectId;
 	title: string;
-	type: QuestionType;
-	options?: Option[];
+	type: IQuestion["type"];
+	options?: IQuestionOption[];
 }
 
-export default function Question({ id, title, type, options = [] }: Props) {
+export default function Question({ _id, title, type, options = [] }: Props) {
 	const [showComment, setShowComment] = useState(false);
-	const { response, updateResponse, isComplete } = useSurveyResponse(id, type);
+	const { response, updateResponse, isComplete } = useSurveyResponse(
+		String(_id),
+		type,
+	);
 
 	const handleCheckboxChange = (optionId: string, checked: boolean) => {
-		const option = options.find((opt) => opt.id === optionId);
+		const option = options.find((opt) => String(opt._id) === optionId);
 		const newResponse = option?.isNegative
 			? checked
 				? [optionId]
@@ -39,7 +35,8 @@ export default function Question({ id, title, type, options = [] }: Props) {
 			: checked
 				? [
 						...response.value.filter(
-							(id: string) => !options.find((opt) => opt.id === id)?.isNegative,
+							(id: string) =>
+								!options.find((opt) => String(opt._id) === id)?.isNegative,
 						),
 						optionId,
 					]
@@ -50,9 +47,9 @@ export default function Question({ id, title, type, options = [] }: Props) {
 
 	const isDisabled = (optionId: string) => {
 		const hasNegativeSelected = response.value.some(
-			(id: string) => options.find((opt) => opt.id === id)?.isNegative,
+			(id: string) => options.find((opt) => String(opt._id) === id)?.isNegative,
 		);
-		const option = options.find((opt) => opt.id === optionId);
+		const option = options.find((opt) => String(opt._id) === optionId);
 		return response.isSkipped || (hasNegativeSelected && !option?.isNegative);
 	};
 
@@ -65,36 +62,37 @@ export default function Question({ id, title, type, options = [] }: Props) {
 	return (
 		<div
 			className={`space-y-4 border rounded-md p-4 text-pretty duration-700 ${getBorderStyle()}`}
-			id={id}
+			id={String(_id)}
 		>
 			<h3 className="font-medium text-lg">{title}</h3>
 
 			{type === "checkbox" && (
 				<div className="space-y-2">
 					{options.map((option) => (
-						<div key={option.id}>
+						<div key={String(option._id)}>
 							<div className="flex items-center space-x-2">
 								<Checkbox
-									id={`${id}-${option.id}`}
-									checked={response.value.includes(option.id)}
-									disabled={isDisabled(option.id)}
+									id={`${_id}-${option._id}`}
+									checked={response.value.includes(String(option._id))}
+									disabled={isDisabled(String(option._id))}
 									onCheckedChange={(checked: boolean) =>
-										handleCheckboxChange(option.id, checked)
+										handleCheckboxChange(String(option._id), checked)
 									}
 								/>
-								<Label htmlFor={`${id}-${option.id}`}>{option.label}</Label>
+								<Label htmlFor={`${_id}-${option._id}`}>{option.label}</Label>
 							</div>
-							{option.isOther && response.value.includes(option.id) && (
-								<Textarea
-									disabled={!!response.isSkipped}
-									placeholder="Please specify..."
-									value={response.otherText}
-									onChange={(e) =>
-										updateResponse({ otherText: e.target.value })
-									}
-									className="max-w-md my-2"
-								/>
-							)}
+							{option.isOther &&
+								response.value.includes(String(option._id)) && (
+									<Textarea
+										disabled={!!response.isSkipped}
+										placeholder="Please specify..."
+										value={response.otherText}
+										onChange={(e) =>
+											updateResponse({ otherText: e.target.value })
+										}
+										className="max-w-md my-2"
+									/>
+								)}
 						</div>
 					))}
 				</div>
@@ -108,15 +106,18 @@ export default function Question({ id, title, type, options = [] }: Props) {
 					}
 				>
 					{options.map((option) => (
-						<div key={option.id} className="flex items-center space-x-2">
+						<div
+							key={String(option._id)}
+							className="flex items-center space-x-2"
+						>
 							<RadioGroupItem
 								disabled={!!response.isSkipped}
-								value={option.id}
-								id={`${id}-${option.id}`}
-								checked={response.value.includes(option.id)}
+								value={String(option._id)}
+								id={`${_id}-${option._id}`}
+								checked={response.value.includes(String(option._id))}
 							/>
 							<Label
-								htmlFor={`${id}-${option.id}`}
+								htmlFor={`${_id}-${option._id}`}
 								className={cn(!!response.isSkipped && "opacity-70")}
 							>
 								{option.label}
