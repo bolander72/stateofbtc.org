@@ -1,6 +1,6 @@
 import Review from "@/components/survey/review";
 import { notFound } from "next/navigation";
-import { getSurveyMetadata } from "@/db/queries";
+import { getSurvey, getSurveyMetadata } from "@/db/queries";
 
 export async function generateStaticParams() {
 	const surveys = await getSurveyMetadata();
@@ -16,8 +16,9 @@ export default async function Page({
 	params: Promise<{ surveyId: string }>;
 }) {
 	const { surveyId } = await params;
-	const surveys = await getSurveyMetadata();
-	const survey = surveys.find((survey) => String(survey._id) === surveyId);
+	const survey = await getSurvey({
+		_id: surveyId,
+	});
 
 	if (!survey) {
 		return notFound();
@@ -29,7 +30,7 @@ export default async function Page({
 				<h1 className="text-3xl font-bold">Survey Review</h1>
 				<h2>Review responses and submit survey</h2>
 			</div>
-			<Review />
+			<Review survey={survey} />
 		</div>
 	);
 }

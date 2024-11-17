@@ -1,8 +1,7 @@
 "use client";
 
-import { surveys } from "@/surveys";
 import { useStore } from "@/components/providers/store-provider";
-import { notFound, useParams } from "next/navigation";
+import { notFound } from "next/navigation";
 import { Link } from "next-view-transitions";
 import {
 	Accordion,
@@ -10,12 +9,13 @@ import {
 	AccordionTrigger,
 	AccordionContent,
 } from "@/components/ui/accordion";
-import { CheckIcon } from "lucide-react";
+import { CheckIcon, XIcon } from "lucide-react";
+import { ISurvey } from "@/db/models/types";
 
-export default function Review() {
+export default function Review({ survey }: { survey: ISurvey }) {
 	const { store } = useStore();
-	const params = useParams();
-	const survey = surveys.find((s) => s.id === params.surveyId);
+
+	console.log("SURVEY", survey);
 
 	if (!survey) {
 		return notFound();
@@ -23,11 +23,19 @@ export default function Review() {
 
 	const getMissingQuestions = (sectionId: string) => {
 		const sectionQuestions =
-			survey.sections.find((s) => s.id === sectionId)?.questions || [];
+			survey.sections.find((s) => String(s._id) === sectionId)?.questions || [];
 
 		return sectionQuestions.filter((question) => {
-			const response = store?.getCell("responses", question.id, "value");
-			const isSkipped = store?.getCell("responses", question.id, "isSkipped");
+			const response = store?.getCell(
+				"responses",
+				String(question._id),
+				"value",
+			);
+			const isSkipped = store?.getCell(
+				"responses",
+				String(question._id),
+				"isSkipped",
+			);
 
 			try {
 				const parsedValue = response ? JSON.parse(response as string) : [];
@@ -41,8 +49,8 @@ export default function Review() {
 
 	return (
 		<div className="space-y-4">
-			{survey.sections.some(
-				(section) => getMissingQuestions(section.id).length > 0,
+			{survey.sections?.some(
+				(section) => getMissingQuestions(String(section._id)).length > 0,
 			) ? (
 				<>
 					<p>The following sections contain unanswered questions:</p>
@@ -50,18 +58,24 @@ export default function Review() {
 						type="multiple"
 						className="space-y-4"
 						defaultValue={[
-							survey.sections.find(
-								(section) => getMissingQuestions(section.id).length > 0,
-							)?.id || "",
+							survey.sections
+								.find(
+									(section) =>
+										getMissingQuestions(String(section._id)).length > 0,
+								)
+								?._id.toString() || "",
 						]}
 					>
 						{survey.sections.map((section) => {
-							const missingQuestions = getMissingQuestions(section.id);
+							const missingQuestions = getMissingQuestions(String(section._id));
 
 							if (missingQuestions.length === 0) return null;
 
 							return (
-								<AccordionItem key={section.id} value={section.id}>
+								<AccordionItem
+									key={String(section._id)}
+									value={String(section._id)}
+								>
 									<AccordionTrigger className="!no-underline">
 										<div className="flex justify-between gap-2">
 											<span className="hover:underline">{section.title}</span>
@@ -70,7 +84,12 @@ export default function Review() {
 													{section.questions.length - missingQuestions.length}/
 													{section.questions.length}
 												</span>
-												<CheckIcon className="h-3 w-3 text-green-700 dark:text-green-600" />
+												{section.questions.length - missingQuestions.length >
+												0 ? (
+													<CheckIcon className="h-3 w-3 text-green-700 dark:text-green-600" />
+												) : (
+													<XIcon className="h-3 w-3 text-red-700 dark:text-red-600" />
+												)}
 											</div>
 										</div>
 									</AccordionTrigger>
@@ -78,8 +97,8 @@ export default function Review() {
 										<ul className="space-y-2 list-disc list-inside">
 											{missingQuestions.map((question) => (
 												<Link
-													key={question.id}
-													href={`/${survey.id}/${section.id}#${question.id}`}
+													key={String(question._id)}
+													href={`/${survey._id}/${String(section._id)}#${String(question._id)}`}
 													className="hover:underline line-clamp-1 w-fit"
 												>
 													<li>{question.title}</li>
