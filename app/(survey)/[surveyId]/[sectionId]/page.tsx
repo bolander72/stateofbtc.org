@@ -1,18 +1,21 @@
 import Question from "@/components/survey/question";
 import { Button } from "@/components/ui/button";
-import { surveys } from "@/surveys";
+import { getSurvey, getSurveyMetadata } from "@/db/queries";
 import { ArrowLeftIcon, ArrowRightIcon } from "lucide-react";
 import { Link } from "next-view-transitions";
 import { notFound } from "next/navigation";
 
 export async function generateStaticParams() {
+	const surveys = await getSurveyMetadata({ withSectionMetadata: true });
+
 	return surveys.flatMap((survey) =>
 		survey.sections.map((section) => ({
-			surveyId: survey.id,
-			sectionId: section.id,
+			surveyId: String(survey._id),
+			sectionId: String(section._id),
 		})),
 	);
 }
+
 export default async function Page({
 	params,
 }: {
@@ -20,9 +23,9 @@ export default async function Page({
 } & {}) {
 	const { surveyId, sectionId } = await params;
 
-	const survey = surveys.find((survey) => survey.id === surveyId);
+	const survey = await getSurvey({ _id: surveyId });
 	const sectionIndex = survey?.sections.findIndex(
-		(section) => section.id === sectionId,
+		(section) => String(section._id) === sectionId,
 	);
 
 	if (!survey || sectionIndex === undefined || sectionIndex === -1) {
@@ -48,7 +51,7 @@ export default async function Page({
 				{prevSection && (
 					<Button asChild variant="secondary">
 						<Link
-							href={`/${surveyId}/${prevSection.id}`}
+							href={`/${surveyId}/${String(prevSection._id)}`}
 							className="flex items-center"
 						>
 							<ArrowLeftIcon className="h-4 w-4" />
@@ -59,7 +62,7 @@ export default async function Page({
 			</div>
 
 			{section.questions.map((question) => (
-				<Question key={question.id} {...question} />
+				<Question key={String(question._id)} {...question} />
 			))}
 
 			<div className="flex justify-between mt-8">
@@ -67,7 +70,7 @@ export default async function Page({
 				{nextSection ? (
 					<Button asChild variant="secondary">
 						<Link
-							href={`/${surveyId}/${nextSection.id}`}
+							href={`/${surveyId}/${String(nextSection._id)}`}
 							className="flex items-center"
 						>
 							{nextSection.title}

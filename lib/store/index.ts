@@ -35,9 +35,11 @@ export async function getStore(surveyId: string) {
 		let persister;
 		if (isIndexedDBAvailable()) {
 			persister = createIndexedDbPersister(store, surveyId);
+			console.log("✅ IndexedDB connected.");
 		} else {
 			console.log("IndexedDB not available, falling back to localStorage");
 			persister = createLocalPersister(store, surveyId);
+			console.log("✅ LocalStorage connected.");
 		}
 
 		await persister.startAutoLoad();

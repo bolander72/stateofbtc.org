@@ -4,6 +4,7 @@ import "./globals.css";
 import { ThemeProvider } from "next-themes";
 import { ViewTransitions } from "next-view-transitions";
 import { NuqsAdapter } from "nuqs/adapters/next/app";
+import { mongofy } from "@/db";
 
 const geistSans = localFont({
 	src: "./fonts/GeistVF.woff",
@@ -20,6 +21,8 @@ export const metadata: Metadata = {
 	title: "State of Bitcoin",
 	description: "The definitive annual Bitcoin ecosystem survey",
 };
+
+await mongofy();
 
 export default function RootLayout({
 	children,
