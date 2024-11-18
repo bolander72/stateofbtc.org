@@ -5,7 +5,7 @@ export const createSurveySubmission = async (responses: Table) => {
 	const surveyId = Object.values(responses)[0].surveyId;
 	const submission = {
 		surveyId,
-		submittedDate: new Date(),
+		date: new Date(),
 		responses: Object.values(responses).map((response) => ({
 			sectionId: response.sectionId,
 			questionId: response.questionId,

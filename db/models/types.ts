@@ -30,15 +30,13 @@ export interface ISurvey {
 	isDefault: boolean;
 	submissionStartDate: Date;
 	submissionEndDate: Date;
-	createdAt: Date;
-	updatedAt: Date;
 }
 
 export interface ISurveyDocument extends ISurvey, Document {}
 
 export interface ISubmissionDocument extends Document {
 	surveyId: ObjectId;
-	submittedDate: Date;
+	date: Date;
 	responses: Array<{
 		sectionId: ObjectId;
 		questionId: ObjectId;

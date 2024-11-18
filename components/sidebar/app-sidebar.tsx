@@ -67,7 +67,7 @@ function findBreadcrumbPath(
 }
 
 type AppSidebarProps = React.ComponentProps<typeof Sidebar> & {
-	surveys?: ISurvey[];
+	surveys: ISurvey[];
 };
 
 export function AppSidebar({ surveys, ...props }: AppSidebarProps) {
@@ -75,7 +75,7 @@ export function AppSidebar({ surveys, ...props }: AppSidebarProps) {
 	const pathname = usePathname();
 	const params = useParams();
 
-	const versions = surveys?.map((survey) => ({
+	const versions = surveys.map((survey) => ({
 		id: String(survey._id),
 		title: survey.title,
 		isDisabled: !survey.isActive,
@@ -103,7 +103,7 @@ export function AppSidebar({ surveys, ...props }: AppSidebarProps) {
 				defaultOpen: true,
 				items: [
 					...(surveys
-						?.find((survey) => survey._id === params.surveyId)
+						.find((survey) => survey._id === params.surveyId)
 						?.sections?.map((section, index) => ({
 							title: `${index + 1}) ${section.title}`,
 							url: `/${params.surveyId}/${section._id}`,

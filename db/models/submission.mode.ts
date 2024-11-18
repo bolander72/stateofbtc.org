@@ -7,7 +7,7 @@ const submissionSchema = new mongoose.Schema({
 		required: true,
 		ref: "Survey",
 	},
-	submittedDate: {
+	date: {
 		type: Date,
 		default: Date.now,
 	},
