@@ -1,5 +1,5 @@
 import { Survey } from "@/db/models/survey.model";
-import { ISurvey } from "../models/types";
+import { ISurvey } from "./models/types";
 import bitcoinSurvey2024 from "@/surveys/bitcoin/2024";
 
 export const getSurveyMetadata = async ({

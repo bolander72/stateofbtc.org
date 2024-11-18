@@ -1,6 +1,7 @@
 import Review from "@/components/survey/review";
 import { notFound } from "next/navigation";
 import { getSurvey, getSurveyMetadata } from "@/db/queries";
+import { createSurveySubmission } from "@/db/mutations";
 
 export async function generateStaticParams() {
 	const surveys = await getSurveyMetadata();
@@ -30,7 +31,13 @@ export default async function Page({
 				<h1 className="text-3xl font-bold">Survey Review</h1>
 				<h2>Review responses and submit survey</h2>
 			</div>
-			<Review survey={survey} />
+			<Review
+				survey={survey}
+				submitSurvey={async (responses) => {
+					"use server";
+					await createSurveySubmission(responses);
+				}}
+			/>
 		</div>
 	);
 }

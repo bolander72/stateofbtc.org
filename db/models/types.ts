@@ -35,3 +35,19 @@ export interface ISurvey {
 }
 
 export interface ISurveyDocument extends ISurvey, Document {}
+
+export interface ISubmissionDocument extends Document {
+	surveyId: ObjectId;
+	submittedDate: Date;
+	responses: Array<{
+		sectionId: ObjectId;
+		questionId: ObjectId;
+		answer: {
+			value: string[];
+			type: string;
+			comment: string;
+			otherText: string;
+			isSkipped: boolean;
+		};
+	}>;
+}
