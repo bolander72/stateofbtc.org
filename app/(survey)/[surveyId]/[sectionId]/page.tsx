@@ -1,3 +1,4 @@
+import SkipSectionButton from "@/components/skip-section-button";
 import Question from "@/components/survey/question";
 import { Button } from "@/components/ui/button";
 import { getSurvey, getSurveyMetadata } from "@/db/queries";
@@ -48,7 +49,7 @@ export default async function Page({
 			</div>
 
 			<div className="flex justify-between">
-				{prevSection && (
+				{prevSection ? (
 					<Button asChild variant="secondary">
 						<Link
 							href={`/${surveyId}/${String(prevSection._id)}`}
@@ -58,7 +59,10 @@ export default async function Page({
 							{prevSection.title}
 						</Link>
 					</Button>
+				) : (
+					<div />
 				)}
+				<SkipSectionButton section={section} />
 			</div>
 
 			{section.questions.map((question) => (

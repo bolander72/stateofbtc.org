@@ -1,6 +1,5 @@
 "use client";
 
-import { useStore } from "@/components/providers/store-provider";
 import { notFound } from "next/navigation";
 import { Link } from "next-view-transitions";
 import {
@@ -14,12 +13,13 @@ import { ISurvey } from "@/db/models/types";
 import { Button } from "../ui/button";
 import { Table } from "tinybase";
 import { useState } from "react";
+import { useStore } from "tinybase/ui-react";
 
 export default function Review({
 	survey,
 	submitSurvey,
 }: { survey: ISurvey; submitSurvey: (responses: Table) => Promise<void> }) {
-	const { store } = useStore();
+	const store = useStore();
 	const [isSubmitting, setIsSubmitting] = useState(false);
 
 	if (!survey) {
@@ -52,8 +52,6 @@ export default function Review({
 		});
 	};
 
-	console.log("table", store.getTable("responses"));
-
 	return (
 		<div className="space-y-4">
 			{survey.sections?.some(
@@ -61,8 +59,8 @@ export default function Review({
 			) ? (
 				<>
 					<div>
-						<p>Please answer all questions to submit the survey.</p>
-						<p>The following sections contain unanswered questions:</p>
+						<p>Please complete all questions before submitting.</p>
+						<p>The following sections have unanswered questions:</p>
 					</div>
 					<Accordion
 						type="multiple"
@@ -134,7 +132,7 @@ export default function Review({
 							className="w-36"
 							onClick={async () => {
 								setIsSubmitting(true);
-								await submitSurvey(store.getTable("responses"));
+								await submitSurvey(store?.getTable("responses") as Table);
 								setIsSubmitting(false);
 							}}
 						>
