@@ -1,7 +1,7 @@
 const countries = [
 	{
 		capital: "Kabul",
-		code: "AF",
+		code: "af",
 		continent: "Asia",
 		flag_1x1: "flags/1x1/af.svg",
 		flag_4x3: "flags/4x3/af.svg",
@@ -10,7 +10,7 @@ const countries = [
 	},
 	{
 		capital: "Mariehamn",
-		code: "AX",
+		code: "ax",
 		continent: "Europe",
 		flag_1x1: "flags/1x1/ax.svg",
 		flag_4x3: "flags/4x3/ax.svg",
@@ -19,7 +19,7 @@ const countries = [
 	},
 	{
 		capital: "Tirana",
-		code: "AL",
+		code: "al",
 		continent: "Europe",
 		flag_1x1: "flags/1x1/al.svg",
 		flag_4x3: "flags/4x3/al.svg",
@@ -28,7 +28,7 @@ const countries = [
 	},
 	{
 		capital: "Algiers",
-		code: "DZ",
+		code: "dz",
 		continent: "Africa",
 		flag_1x1: "flags/1x1/dz.svg",
 		flag_4x3: "flags/4x3/dz.svg",
@@ -37,7 +37,7 @@ const countries = [
 	},
 	{
 		capital: "Pago Pago",
-		code: "AS",
+		code: "as",
 		continent: "Oceania",
 		flag_1x1: "flags/1x1/as.svg",
 		flag_4x3: "flags/4x3/as.svg",
@@ -46,7 +46,7 @@ const countries = [
 	},
 	{
 		capital: "Andorra la Vella",
-		code: "AD",
+		code: "ad",
 		continent: "Europe",
 		flag_1x1: "flags/1x1/ad.svg",
 		flag_4x3: "flags/4x3/ad.svg",
@@ -55,7 +55,7 @@ const countries = [
 	},
 	{
 		capital: "Luanda",
-		code: "AO",
+		code: "ao",
 		continent: "Africa",
 		flag_1x1: "flags/1x1/ao.svg",
 		flag_4x3: "flags/4x3/ao.svg",
@@ -64,7 +64,7 @@ const countries = [
 	},
 	{
 		capital: "The Valley",
-		code: "AI",
+		code: "ai",
 		continent: "North America",
 		flag_1x1: "flags/1x1/ai.svg",
 		flag_4x3: "flags/4x3/ai.svg",
@@ -72,7 +72,7 @@ const countries = [
 		name: "Anguilla",
 	},
 	{
-		code: "AQ",
+		code: "aq",
 		flag_1x1: "flags/1x1/aq.svg",
 		flag_4x3: "flags/4x3/aq.svg",
 		iso: true,
@@ -80,7 +80,7 @@ const countries = [
 	},
 	{
 		capital: "St. John's",
-		code: "AG",
+		code: "ag",
 		continent: "North America",
 		flag_1x1: "flags/1x1/ag.svg",
 		flag_4x3: "flags/4x3/ag.svg",
@@ -89,7 +89,7 @@ const countries = [
 	},
 	{
 		capital: "Buenos Aires",
-		code: "AR",
+		code: "ar",
 		continent: "South America",
 		flag_1x1: "flags/1x1/ar.svg",
 		flag_4x3: "flags/4x3/ar.svg",
@@ -98,7 +98,7 @@ const countries = [
 	},
 	{
 		capital: "Yerevan",
-		code: "AM",
+		code: "am",
 		continent: "Asia",
 		flag_1x1: "flags/1x1/am.svg",
 		flag_4x3: "flags/4x3/am.svg",
@@ -107,7 +107,7 @@ const countries = [
 	},
 	{
 		capital: "Oranjestad",
-		code: "AW",
+		code: "aw",
 		continent: "South America",
 		flag_1x1: "flags/1x1/aw.svg",
 		flag_4x3: "flags/4x3/aw.svg",
@@ -116,7 +116,7 @@ const countries = [
 	},
 	{
 		capital: "Georgetown",
-		code: "SH-AC",
+		code: "sh-ac",
 		continent: "Africa",
 		flag_1x1: "flags/1x1/sh-ac.svg",
 		flag_4x3: "flags/4x3/sh-ac.svg",
@@ -125,7 +125,7 @@ const countries = [
 	},
 	{
 		capital: "Canberra",
-		code: "AU",
+		code: "au",
 		continent: "Oceania",
 		flag_1x1: "flags/1x1/au.svg",
 		flag_4x3: "flags/4x3/au.svg",
@@ -134,7 +134,7 @@ const countries = [
 	},
 	{
 		capital: "Vienna",
-		code: "AT",
+		code: "at",
 		continent: "Europe",
 		flag_1x1: "flags/1x1/at.svg",
 		flag_4x3: "flags/4x3/at.svg",
@@ -143,7 +143,7 @@ const countries = [
 	},
 	{
 		capital: "Baku",
-		code: "AZ",
+		code: "az",
 		continent: "Asia",
 		flag_1x1: "flags/1x1/az.svg",
 		flag_4x3: "flags/4x3/az.svg",
@@ -152,7 +152,7 @@ const countries = [
 	},
 	{
 		capital: "Nassau",
-		code: "BS",
+		code: "bs",
 		continent: "North America",
 		flag_1x1: "flags/1x1/bs.svg",
 		flag_4x3: "flags/4x3/bs.svg",
@@ -161,7 +161,7 @@ const countries = [
 	},
 	{
 		capital: "Manama",
-		code: "BH",
+		code: "bh",
 		continent: "Asia",
 		flag_1x1: "flags/1x1/bh.svg",
 		flag_4x3: "flags/4x3/bh.svg",
@@ -170,7 +170,7 @@ const countries = [
 	},
 	{
 		capital: "Dhaka",
-		code: "BD",
+		code: "bd",
 		continent: "Asia",
 		flag_1x1: "flags/1x1/bd.svg",
 		flag_4x3: "flags/4x3/bd.svg",
@@ -179,7 +179,7 @@ const countries = [
 	},
 	{
 		capital: "Bridgetown",
-		code: "BB",
+		code: "bb",
 		continent: "North America",
 		flag_1x1: "flags/1x1/bb.svg",
 		flag_4x3: "flags/4x3/bb.svg",
@@ -187,7 +187,7 @@ const countries = [
 		name: "Barbados",
 	},
 	{
-		code: "ES-PV",
+		code: "es-pv",
 		flag_1x1: "flags/1x1/es-pv.svg",
 		flag_4x3: "flags/4x3/es-pv.svg",
 		iso: false,
@@ -195,7 +195,7 @@ const countries = [
 	},
 	{
 		capital: "Minsk",
-		code: "BY",
+		code: "by",
 		continent: "Europe",
 		flag_1x1: "flags/1x1/by.svg",
 		flag_4x3: "flags/4x3/by.svg",
@@ -204,7 +204,7 @@ const countries = [
 	},
 	{
 		capital: "Brussels",
-		code: "BE",
+		code: "be",
 		continent: "Europe",
 		flag_1x1: "flags/1x1/be.svg",
 		flag_4x3: "flags/4x3/be.svg",
@@ -213,7 +213,7 @@ const countries = [
 	},
 	{
 		capital: "Belmopan",
-		code: "BZ",
+		code: "bz",
 		continent: "North America",
 		flag_1x1: "flags/1x1/bz.svg",
 		flag_4x3: "flags/4x3/bz.svg",
@@ -222,7 +222,7 @@ const countries = [
 	},
 	{
 		capital: "Porto-Novo",
-		code: "BJ",
+		code: "bj",
 		continent: "Africa",
 		flag_1x1: "flags/1x1/bj.svg",
 		flag_4x3: "flags/4x3/bj.svg",
@@ -231,7 +231,7 @@ const countries = [
 	},
 	{
 		capital: "Hamilton",
-		code: "BM",
+		code: "bm",
 		continent: "North America",
 		flag_1x1: "flags/1x1/bm.svg",
 		flag_4x3: "flags/4x3/bm.svg",
@@ -240,7 +240,7 @@ const countries = [
 	},
 	{
 		capital: "Thimphu",
-		code: "BT",
+		code: "bt",
 		continent: "Asia",
 		flag_1x1: "flags/1x1/bt.svg",
 		flag_4x3: "flags/4x3/bt.svg",
@@ -249,7 +249,7 @@ const countries = [
 	},
 	{
 		capital: "Sucre",
-		code: "BO",
+		code: "bo",
 		continent: "South America",
 		flag_1x1: "flags/1x1/bo.svg",
 		flag_4x3: "flags/4x3/bo.svg",
@@ -258,7 +258,7 @@ const countries = [
 	},
 	{
 		capital: "Kralendijk",
-		code: "BQ",
+		code: "bq",
 		continent: "South America",
 		flag_1x1: "flags/1x1/bq.svg",
 		flag_4x3: "flags/4x3/bq.svg",
@@ -267,7 +267,7 @@ const countries = [
 	},
 	{
 		capital: "Sarajevo",
-		code: "BA",
+		code: "ba",
 		continent: "Europe",
 		flag_1x1: "flags/1x1/ba.svg",
 		flag_4x3: "flags/4x3/ba.svg",
@@ -276,7 +276,7 @@ const countries = [
 	},
 	{
 		capital: "Gaborone",
-		code: "BW",
+		code: "bw",
 		continent: "Africa",
 		flag_1x1: "flags/1x1/bw.svg",
 		flag_4x3: "flags/4x3/bw.svg",
@@ -284,7 +284,7 @@ const countries = [
 		name: "Botswana",
 	},
 	{
-		code: "BV",
+		code: "bv",
 		flag_1x1: "flags/1x1/bv.svg",
 		flag_4x3: "flags/4x3/bv.svg",
 		iso: true,
@@ -292,7 +292,7 @@ const countries = [
 	},
 	{
 		capital: "Brasília",
-		code: "BR",
+		code: "br",
 		continent: "South America",
 		flag_1x1: "flags/1x1/br.svg",
 		flag_4x3: "flags/4x3/br.svg",
@@ -301,7 +301,7 @@ const countries = [
 	},
 	{
 		capital: "Diego Garcia",
-		code: "IO",
+		code: "io",
 		continent: "Asia",
 		flag_1x1: "flags/1x1/io.svg",
 		flag_4x3: "flags/4x3/io.svg",
@@ -310,7 +310,7 @@ const countries = [
 	},
 	{
 		capital: "Bandar Seri Begawan",
-		code: "BN",
+		code: "bn",
 		continent: "Asia",
 		flag_1x1: "flags/1x1/bn.svg",
 		flag_4x3: "flags/4x3/bn.svg",
@@ -319,7 +319,7 @@ const countries = [
 	},
 	{
 		capital: "Sofia",
-		code: "BG",
+		code: "bg",
 		continent: "Europe",
 		flag_1x1: "flags/1x1/bg.svg",
 		flag_4x3: "flags/4x3/bg.svg",
@@ -328,7 +328,7 @@ const countries = [
 	},
 	{
 		capital: "Ouagadougou",
-		code: "BF",
+		code: "bf",
 		continent: "Africa",
 		flag_1x1: "flags/1x1/bf.svg",
 		flag_4x3: "flags/4x3/bf.svg",
@@ -337,7 +337,7 @@ const countries = [
 	},
 	{
 		capital: "Bujumbura",
-		code: "BI",
+		code: "bi",
 		continent: "Africa",
 		flag_1x1: "flags/1x1/bi.svg",
 		flag_4x3: "flags/4x3/bi.svg",
@@ -346,7 +346,7 @@ const countries = [
 	},
 	{
 		capital: "Praia",
-		code: "CV",
+		code: "cv",
 		continent: "Africa",
 		flag_1x1: "flags/1x1/cv.svg",
 		flag_4x3: "flags/4x3/cv.svg",
@@ -355,7 +355,7 @@ const countries = [
 	},
 	{
 		capital: "Phnom Penh",
-		code: "KH",
+		code: "kh",
 		continent: "Asia",
 		flag_1x1: "flags/1x1/kh.svg",
 		flag_4x3: "flags/4x3/kh.svg",
@@ -364,7 +364,7 @@ const countries = [
 	},
 	{
 		capital: "Yaoundé",
-		code: "CM",
+		code: "cm",
 		continent: "Africa",
 		flag_1x1: "flags/1x1/cm.svg",
 		flag_4x3: "flags/4x3/cm.svg",
@@ -373,7 +373,7 @@ const countries = [
 	},
 	{
 		capital: "Ottawa",
-		code: "CA",
+		code: "ca",
 		continent: "North America",
 		flag_1x1: "flags/1x1/ca.svg",
 		flag_4x3: "flags/4x3/ca.svg",
@@ -381,14 +381,14 @@ const countries = [
 		name: "Canada",
 	},
 	{
-		code: "IC",
+		code: "ic",
 		flag_1x1: "flags/1x1/ic.svg",
 		flag_4x3: "flags/4x3/ic.svg",
 		iso: false,
 		name: "Canary Islands",
 	},
 	{
-		code: "ES-CT",
+		code: "es-ct",
 		flag_1x1: "flags/1x1/es-ct.svg",
 		flag_4x3: "flags/4x3/es-ct.svg",
 		iso: false,
@@ -396,7 +396,7 @@ const countries = [
 	},
 	{
 		capital: "George Town",
-		code: "KY",
+		code: "ky",
 		continent: "North America",
 		flag_1x1: "flags/1x1/ky.svg",
 		flag_4x3: "flags/4x3/ky.svg",
@@ -405,7 +405,7 @@ const countries = [
 	},
 	{
 		capital: "Bangui",
-		code: "CF",
+		code: "cf",
 		continent: "Africa",
 		flag_1x1: "flags/1x1/cf.svg",
 		flag_4x3: "flags/4x3/cf.svg",
@@ -413,7 +413,7 @@ const countries = [
 		name: "Central African Republic",
 	},
 	{
-		code: "CEFTA",
+		code: "cefta",
 		flag_1x1: "flags/1x1/cefta.svg",
 		flag_4x3: "flags/4x3/cefta.svg",
 		iso: false,
@@ -421,7 +421,7 @@ const countries = [
 	},
 	{
 		capital: "N'Djamena",
-		code: "TD",
+		code: "td",
 		continent: "Africa",
 		flag_1x1: "flags/1x1/td.svg",
 		flag_4x3: "flags/4x3/td.svg",
@@ -430,7 +430,7 @@ const countries = [
 	},
 	{
 		capital: "Santiago",
-		code: "CL",
+		code: "cl",
 		continent: "South America",
 		flag_1x1: "flags/1x1/cl.svg",
 		flag_4x3: "flags/4x3/cl.svg",
@@ -439,7 +439,7 @@ const countries = [
 	},
 	{
 		capital: "Beijing",
-		code: "CN",
+		code: "cn",
 		continent: "Asia",
 		flag_1x1: "flags/1x1/cn.svg",
 		flag_4x3: "flags/4x3/cn.svg",
@@ -448,7 +448,7 @@ const countries = [
 	},
 	{
 		capital: "Flying Fish Cove",
-		code: "CX",
+		code: "cx",
 		continent: "Asia",
 		flag_1x1: "flags/1x1/cx.svg",
 		flag_4x3: "flags/4x3/cx.svg",
@@ -456,7 +456,7 @@ const countries = [
 		name: "Christmas Island",
 	},
 	{
-		code: "CP",
+		code: "cp",
 		flag_1x1: "flags/1x1/cp.svg",
 		flag_4x3: "flags/4x3/cp.svg",
 		iso: false,
@@ -464,7 +464,7 @@ const countries = [
 	},
 	{
 		capital: "West Island",
-		code: "CC",
+		code: "cc",
 		continent: "Asia",
 		flag_1x1: "flags/1x1/cc.svg",
 		flag_4x3: "flags/4x3/cc.svg",
@@ -473,7 +473,7 @@ const countries = [
 	},
 	{
 		capital: "Bogotá",
-		code: "CO",
+		code: "co",
 		continent: "South America",
 		flag_1x1: "flags/1x1/co.svg",
 		flag_4x3: "flags/4x3/co.svg",
@@ -482,7 +482,7 @@ const countries = [
 	},
 	{
 		capital: "Moroni",
-		code: "KM",
+		code: "km",
 		continent: "Africa",
 		flag_1x1: "flags/1x1/km.svg",
 		flag_4x3: "flags/4x3/km.svg",
@@ -491,7 +491,7 @@ const countries = [
 	},
 	{
 		capital: "Avarua",
-		code: "CK",
+		code: "ck",
 		continent: "Oceania",
 		flag_1x1: "flags/1x1/ck.svg",
 		flag_4x3: "flags/4x3/ck.svg",
@@ -500,7 +500,7 @@ const countries = [
 	},
 	{
 		capital: "San José",
-		code: "CR",
+		code: "cr",
 		continent: "North America",
 		flag_1x1: "flags/1x1/cr.svg",
 		flag_4x3: "flags/4x3/cr.svg",
@@ -509,7 +509,7 @@ const countries = [
 	},
 	{
 		capital: "Zagreb",
-		code: "HR",
+		code: "hr",
 		continent: "Europe",
 		flag_1x1: "flags/1x1/hr.svg",
 		flag_4x3: "flags/4x3/hr.svg",
@@ -518,7 +518,7 @@ const countries = [
 	},
 	{
 		capital: "Havana",
-		code: "CU",
+		code: "cu",
 		continent: "North America",
 		flag_1x1: "flags/1x1/cu.svg",
 		flag_4x3: "flags/4x3/cu.svg",
@@ -527,7 +527,7 @@ const countries = [
 	},
 	{
 		capital: "Willemstad",
-		code: "CW",
+		code: "cw",
 		continent: "South America",
 		flag_1x1: "flags/1x1/cw.svg",
 		flag_4x3: "flags/4x3/cw.svg",
@@ -536,7 +536,7 @@ const countries = [
 	},
 	{
 		capital: "Nicosia",
-		code: "CY",
+		code: "cy",
 		continent: "Europe",
 		flag_1x1: "flags/1x1/cy.svg",
 		flag_4x3: "flags/4x3/cy.svg",
@@ -545,7 +545,7 @@ const countries = [
 	},
 	{
 		capital: "Prague",
-		code: "CZ",
+		code: "cz",
 		continent: "Europe",
 		flag_1x1: "flags/1x1/cz.svg",
 		flag_4x3: "flags/4x3/cz.svg",
@@ -554,7 +554,7 @@ const countries = [
 	},
 	{
 		capital: "Yamoussoukro",
-		code: "CI",
+		code: "ci",
 		continent: "Africa",
 		flag_1x1: "flags/1x1/ci.svg",
 		flag_4x3: "flags/4x3/ci.svg",
@@ -563,7 +563,7 @@ const countries = [
 	},
 	{
 		capital: "Kinshasa",
-		code: "CD",
+		code: "cd",
 		continent: "Africa",
 		flag_1x1: "flags/1x1/cd.svg",
 		flag_4x3: "flags/4x3/cd.svg",
@@ -572,7 +572,7 @@ const countries = [
 	},
 	{
 		capital: "Copenhagen",
-		code: "DK",
+		code: "dk",
 		continent: "Europe",
 		flag_1x1: "flags/1x1/dk.svg",
 		flag_4x3: "flags/4x3/dk.svg",
@@ -580,7 +580,7 @@ const countries = [
 		name: "Denmark",
 	},
 	{
-		code: "DG",
+		code: "dg",
 		flag_1x1: "flags/1x1/dg.svg",
 		flag_4x3: "flags/4x3/dg.svg",
 		iso: false,
@@ -588,7 +588,7 @@ const countries = [
 	},
 	{
 		capital: "Djibouti",
-		code: "DJ",
+		code: "dj",
 		continent: "Africa",
 		flag_1x1: "flags/1x1/dj.svg",
 		flag_4x3: "flags/4x3/dj.svg",
@@ -597,7 +597,7 @@ const countries = [
 	},
 	{
 		capital: "Roseau",
-		code: "DM",
+		code: "dm",
 		continent: "North America",
 		flag_1x1: "flags/1x1/dm.svg",
 		flag_4x3: "flags/4x3/dm.svg",
@@ -606,7 +606,7 @@ const countries = [
 	},
 	{
 		capital: "Santo Domingo",
-		code: "DO",
+		code: "do",
 		continent: "North America",
 		flag_1x1: "flags/1x1/do.svg",
 		flag_4x3: "flags/4x3/do.svg",
@@ -614,7 +614,7 @@ const countries = [
 		name: "Dominican Republic",
 	},
 	{
-		code: "EAC",
+		code: "eac",
 		flag_1x1: "flags/1x1/eac.svg",
 		flag_4x3: "flags/4x3/eac.svg",
 		iso: false,
@@ -622,7 +622,7 @@ const countries = [
 	},
 	{
 		capital: "Quito",
-		code: "EC",
+		code: "ec",
 		continent: "South America",
 		flag_1x1: "flags/1x1/ec.svg",
 		flag_4x3: "flags/4x3/ec.svg",
@@ -631,7 +631,7 @@ const countries = [
 	},
 	{
 		capital: "Cairo",
-		code: "EG",
+		code: "eg",
 		continent: "Africa",
 		flag_1x1: "flags/1x1/eg.svg",
 		flag_4x3: "flags/4x3/eg.svg",
@@ -640,7 +640,7 @@ const countries = [
 	},
 	{
 		capital: "San Salvador",
-		code: "SV",
+		code: "sv",
 		continent: "North America",
 		flag_1x1: "flags/1x1/sv.svg",
 		flag_4x3: "flags/4x3/sv.svg",
@@ -649,7 +649,7 @@ const countries = [
 	},
 	{
 		capital: "London",
-		code: "GB-ENG",
+		code: "gb-eng",
 		continent: "Europe",
 		flag_1x1: "flags/1x1/gb-eng.svg",
 		flag_4x3: "flags/4x3/gb-eng.svg",
@@ -658,7 +658,7 @@ const countries = [
 	},
 	{
 		capital: "Malabo",
-		code: "GQ",
+		code: "gq",
 		continent: "Africa",
 		flag_1x1: "flags/1x1/gq.svg",
 		flag_4x3: "flags/4x3/gq.svg",
@@ -667,7 +667,7 @@ const countries = [
 	},
 	{
 		capital: "Asmara",
-		code: "ER",
+		code: "er",
 		continent: "Africa",
 		flag_1x1: "flags/1x1/er.svg",
 		flag_4x3: "flags/4x3/er.svg",
@@ -676,7 +676,7 @@ const countries = [
 	},
 	{
 		capital: "Tallinn",
-		code: "EE",
+		code: "ee",
 		continent: "Europe",
 		flag_1x1: "flags/1x1/ee.svg",
 		flag_4x3: "flags/4x3/ee.svg",
@@ -685,7 +685,7 @@ const countries = [
 	},
 	{
 		capital: "Lobamba, Mbabane",
-		code: "SZ",
+		code: "sz",
 		continent: "Africa",
 		flag_1x1: "flags/1x1/sz.svg",
 		flag_4x3: "flags/4x3/sz.svg",
@@ -694,7 +694,7 @@ const countries = [
 	},
 	{
 		capital: "Addis Ababa",
-		code: "ET",
+		code: "et",
 		continent: "Africa",
 		flag_1x1: "flags/1x1/et.svg",
 		flag_4x3: "flags/4x3/et.svg",
@@ -702,7 +702,7 @@ const countries = [
 		name: "Ethiopia",
 	},
 	{
-		code: "EU",
+		code: "eu",
 		flag_1x1: "flags/1x1/eu.svg",
 		flag_4x3: "flags/4x3/eu.svg",
 		iso: false,
@@ -710,7 +710,7 @@ const countries = [
 	},
 	{
 		capital: "Stanley",
-		code: "FK",
+		code: "fk",
 		continent: "South America",
 		flag_1x1: "flags/1x1/fk.svg",
 		flag_4x3: "flags/4x3/fk.svg",
@@ -719,7 +719,7 @@ const countries = [
 	},
 	{
 		capital: "Tórshavn",
-		code: "FO",
+		code: "fo",
 		continent: "Europe",
 		flag_1x1: "flags/1x1/fo.svg",
 		flag_4x3: "flags/4x3/fo.svg",
@@ -728,7 +728,7 @@ const countries = [
 	},
 	{
 		capital: "Palikir",
-		code: "FM",
+		code: "fm",
 		continent: "Oceania",
 		flag_1x1: "flags/1x1/fm.svg",
 		flag_4x3: "flags/4x3/fm.svg",
@@ -737,7 +737,7 @@ const countries = [
 	},
 	{
 		capital: "Suva",
-		code: "FJ",
+		code: "fj",
 		continent: "Oceania",
 		flag_1x1: "flags/1x1/fj.svg",
 		flag_4x3: "flags/4x3/fj.svg",
@@ -746,7 +746,7 @@ const countries = [
 	},
 	{
 		capital: "Helsinki",
-		code: "FI",
+		code: "fi",
 		continent: "Europe",
 		flag_1x1: "flags/1x1/fi.svg",
 		flag_4x3: "flags/4x3/fi.svg",
@@ -755,7 +755,7 @@ const countries = [
 	},
 	{
 		capital: "Paris",
-		code: "FR",
+		code: "fr",
 		continent: "Europe",
 		flag_1x1: "flags/1x1/fr.svg",
 		flag_4x3: "flags/4x3/fr.svg",
@@ -764,7 +764,7 @@ const countries = [
 	},
 	{
 		capital: "Cayenne",
-		code: "GF",
+		code: "gf",
 		continent: "South America",
 		flag_1x1: "flags/1x1/gf.svg",
 		flag_4x3: "flags/4x3/gf.svg",
@@ -773,7 +773,7 @@ const countries = [
 	},
 	{
 		capital: "Papeete",
-		code: "PF",
+		code: "pf",
 		continent: "Oceania",
 		flag_1x1: "flags/1x1/pf.svg",
 		flag_4x3: "flags/4x3/pf.svg",
@@ -782,7 +782,7 @@ const countries = [
 	},
 	{
 		capital: "Saint-Pierre, Réunion",
-		code: "TF",
+		code: "tf",
 		continent: "Africa",
 		flag_1x1: "flags/1x1/tf.svg",
 		flag_4x3: "flags/4x3/tf.svg",
@@ -791,7 +791,7 @@ const countries = [
 	},
 	{
 		capital: "Libreville",
-		code: "GA",
+		code: "ga",
 		continent: "Africa",
 		flag_1x1: "flags/1x1/ga.svg",
 		flag_4x3: "flags/4x3/ga.svg",
@@ -799,7 +799,7 @@ const countries = [
 		name: "Gabon",
 	},
 	{
-		code: "ES-GA",
+		code: "es-ga",
 		flag_1x1: "flags/1x1/es-ga.svg",
 		flag_4x3: "flags/4x3/es-ga.svg",
 		iso: false,
@@ -807,7 +807,7 @@ const countries = [
 	},
 	{
 		capital: "Banjul",
-		code: "GM",
+		code: "gm",
 		continent: "Africa",
 		flag_1x1: "flags/1x1/gm.svg",
 		flag_4x3: "flags/4x3/gm.svg",
@@ -816,7 +816,7 @@ const countries = [
 	},
 	{
 		capital: "Tbilisi",
-		code: "GE",
+		code: "ge",
 		continent: "Asia",
 		flag_1x1: "flags/1x1/ge.svg",
 		flag_4x3: "flags/4x3/ge.svg",
@@ -825,7 +825,7 @@ const countries = [
 	},
 	{
 		capital: "Berlin",
-		code: "DE",
+		code: "de",
 		continent: "Europe",
 		flag_1x1: "flags/1x1/de.svg",
 		flag_4x3: "flags/4x3/de.svg",
@@ -834,7 +834,7 @@ const countries = [
 	},
 	{
 		capital: "Accra",
-		code: "GH",
+		code: "gh",
 		continent: "Africa",
 		flag_1x1: "flags/1x1/gh.svg",
 		flag_4x3: "flags/4x3/gh.svg",
@@ -843,7 +843,7 @@ const countries = [
 	},
 	{
 		capital: "Gibraltar",
-		code: "GI",
+		code: "gi",
 		continent: "Europe",
 		flag_1x1: "flags/1x1/gi.svg",
 		flag_4x3: "flags/4x3/gi.svg",
@@ -852,7 +852,7 @@ const countries = [
 	},
 	{
 		capital: "Athens",
-		code: "GR",
+		code: "gr",
 		continent: "Europe",
 		flag_1x1: "flags/1x1/gr.svg",
 		flag_4x3: "flags/4x3/gr.svg",
@@ -861,7 +861,7 @@ const countries = [
 	},
 	{
 		capital: "Nuuk",
-		code: "GL",
+		code: "gl",
 		continent: "North America",
 		flag_1x1: "flags/1x1/gl.svg",
 		flag_4x3: "flags/4x3/gl.svg",
@@ -870,7 +870,7 @@ const countries = [
 	},
 	{
 		capital: "St. George's",
-		code: "GD",
+		code: "gd",
 		continent: "North America",
 		flag_1x1: "flags/1x1/gd.svg",
 		flag_4x3: "flags/4x3/gd.svg",
@@ -879,7 +879,7 @@ const countries = [
 	},
 	{
 		capital: "Basse-Terre",
-		code: "GP",
+		code: "gp",
 		continent: "North America",
 		flag_1x1: "flags/1x1/gp.svg",
 		flag_4x3: "flags/4x3/gp.svg",
@@ -888,7 +888,7 @@ const countries = [
 	},
 	{
 		capital: "Hagåtña",
-		code: "GU",
+		code: "gu",
 		continent: "Oceania",
 		flag_1x1: "flags/1x1/gu.svg",
 		flag_4x3: "flags/4x3/gu.svg",
@@ -897,7 +897,7 @@ const countries = [
 	},
 	{
 		capital: "Guatemala City",
-		code: "GT",
+		code: "gt",
 		continent: "North America",
 		flag_1x1: "flags/1x1/gt.svg",
 		flag_4x3: "flags/4x3/gt.svg",
@@ -906,7 +906,7 @@ const countries = [
 	},
 	{
 		capital: "Saint Peter Port",
-		code: "GG",
+		code: "gg",
 		continent: "Europe",
 		flag_1x1: "flags/1x1/gg.svg",
 		flag_4x3: "flags/4x3/gg.svg",
@@ -915,7 +915,7 @@ const countries = [
 	},
 	{
 		capital: "Conakry",
-		code: "GN",
+		code: "gn",
 		continent: "Africa",
 		flag_1x1: "flags/1x1/gn.svg",
 		flag_4x3: "flags/4x3/gn.svg",
@@ -924,7 +924,7 @@ const countries = [
 	},
 	{
 		capital: "Bissau",
-		code: "GW",
+		code: "gw",
 		continent: "Africa",
 		flag_1x1: "flags/1x1/gw.svg",
 		flag_4x3: "flags/4x3/gw.svg",
@@ -933,7 +933,7 @@ const countries = [
 	},
 	{
 		capital: "Georgetown",
-		code: "GY",
+		code: "gy",
 		continent: "South America",
 		flag_1x1: "flags/1x1/gy.svg",
 		flag_4x3: "flags/4x3/gy.svg",
@@ -942,7 +942,7 @@ const countries = [
 	},
 	{
 		capital: "Port-au-Prince",
-		code: "HT",
+		code: "ht",
 		continent: "North America",
 		flag_1x1: "flags/1x1/ht.svg",
 		flag_4x3: "flags/4x3/ht.svg",
@@ -950,7 +950,7 @@ const countries = [
 		name: "Haiti",
 	},
 	{
-		code: "HM",
+		code: "hm",
 		flag_1x1: "flags/1x1/hm.svg",
 		flag_4x3: "flags/4x3/hm.svg",
 		iso: true,
@@ -958,7 +958,7 @@ const countries = [
 	},
 	{
 		capital: "Vatican City",
-		code: "VA",
+		code: "va",
 		continent: "Europe",
 		flag_1x1: "flags/1x1/va.svg",
 		flag_4x3: "flags/4x3/va.svg",
@@ -967,7 +967,7 @@ const countries = [
 	},
 	{
 		capital: "Tegucigalpa",
-		code: "HN",
+		code: "hn",
 		continent: "North America",
 		flag_1x1: "flags/1x1/hn.svg",
 		flag_4x3: "flags/4x3/hn.svg",
@@ -976,7 +976,7 @@ const countries = [
 	},
 	{
 		capital: "Hong Kong",
-		code: "HK",
+		code: "hk",
 		continent: "Asia",
 		flag_1x1: "flags/1x1/hk.svg",
 		flag_4x3: "flags/4x3/hk.svg",
@@ -985,7 +985,7 @@ const countries = [
 	},
 	{
 		capital: "Budapest",
-		code: "HU",
+		code: "hu",
 		continent: "Europe",
 		flag_1x1: "flags/1x1/hu.svg",
 		flag_4x3: "flags/4x3/hu.svg",
@@ -994,7 +994,7 @@ const countries = [
 	},
 	{
 		capital: "Reykjavik",
-		code: "IS",
+		code: "is",
 		continent: "Europe",
 		flag_1x1: "flags/1x1/is.svg",
 		flag_4x3: "flags/4x3/is.svg",
@@ -1003,7 +1003,7 @@ const countries = [
 	},
 	{
 		capital: "New Delhi",
-		code: "IN",
+		code: "in",
 		continent: "Asia",
 		flag_1x1: "flags/1x1/in.svg",
 		flag_4x3: "flags/4x3/in.svg",
@@ -1012,7 +1012,7 @@ const countries = [
 	},
 	{
 		capital: "Jakarta",
-		code: "ID",
+		code: "id",
 		continent: "Asia",
 		flag_1x1: "flags/1x1/id.svg",
 		flag_4x3: "flags/4x3/id.svg",
@@ -1021,7 +1021,7 @@ const countries = [
 	},
 	{
 		capital: "Tehran",
-		code: "IR",
+		code: "ir",
 		continent: "Asia",
 		flag_1x1: "flags/1x1/ir.svg",
 		flag_4x3: "flags/4x3/ir.svg",
@@ -1030,7 +1030,7 @@ const countries = [
 	},
 	{
 		capital: "Baghdad",
-		code: "IQ",
+		code: "iq",
 		continent: "Asia",
 		flag_1x1: "flags/1x1/iq.svg",
 		flag_4x3: "flags/4x3/iq.svg",
@@ -1039,7 +1039,7 @@ const countries = [
 	},
 	{
 		capital: "Dublin",
-		code: "IE",
+		code: "ie",
 		continent: "Europe",
 		flag_1x1: "flags/1x1/ie.svg",
 		flag_4x3: "flags/4x3/ie.svg",
@@ -1048,7 +1048,7 @@ const countries = [
 	},
 	{
 		capital: "Douglas",
-		code: "IM",
+		code: "im",
 		continent: "Europe",
 		flag_1x1: "flags/1x1/im.svg",
 		flag_4x3: "flags/4x3/im.svg",
@@ -1057,7 +1057,7 @@ const countries = [
 	},
 	{
 		capital: "Jerusalem",
-		code: "IL",
+		code: "il",
 		continent: "Asia",
 		flag_1x1: "flags/1x1/il.svg",
 		flag_4x3: "flags/4x3/il.svg",
@@ -1066,7 +1066,7 @@ const countries = [
 	},
 	{
 		capital: "Rome",
-		code: "IT",
+		code: "it",
 		continent: "Europe",
 		flag_1x1: "flags/1x1/it.svg",
 		flag_4x3: "flags/4x3/it.svg",
@@ -1075,7 +1075,7 @@ const countries = [
 	},
 	{
 		capital: "Kingston",
-		code: "JM",
+		code: "jm",
 		continent: "North America",
 		flag_1x1: "flags/1x1/jm.svg",
 		flag_4x3: "flags/4x3/jm.svg",
@@ -1084,7 +1084,7 @@ const countries = [
 	},
 	{
 		capital: "Tokyo",
-		code: "JP",
+		code: "jp",
 		continent: "Asia",
 		flag_1x1: "flags/1x1/jp.svg",
 		flag_4x3: "flags/4x3/jp.svg",
@@ -1093,7 +1093,7 @@ const countries = [
 	},
 	{
 		capital: "Saint Helier",
-		code: "JE",
+		code: "je",
 		continent: "Europe",
 		flag_1x1: "flags/1x1/je.svg",
 		flag_4x3: "flags/4x3/je.svg",
@@ -1102,7 +1102,7 @@ const countries = [
 	},
 	{
 		capital: "Amman",
-		code: "JO",
+		code: "jo",
 		continent: "Asia",
 		flag_1x1: "flags/1x1/jo.svg",
 		flag_4x3: "flags/4x3/jo.svg",
@@ -1111,7 +1111,7 @@ const countries = [
 	},
 	{
 		capital: "Astana",
-		code: "KZ",
+		code: "kz",
 		continent: "Asia",
 		flag_1x1: "flags/1x1/kz.svg",
 		flag_4x3: "flags/4x3/kz.svg",
@@ -1120,7 +1120,7 @@ const countries = [
 	},
 	{
 		capital: "Nairobi",
-		code: "KE",
+		code: "ke",
 		continent: "Africa",
 		flag_1x1: "flags/1x1/ke.svg",
 		flag_4x3: "flags/4x3/ke.svg",
@@ -1129,7 +1129,7 @@ const countries = [
 	},
 	{
 		capital: "South Tarawa",
-		code: "KI",
+		code: "ki",
 		continent: "Oceania",
 		flag_1x1: "flags/1x1/ki.svg",
 		flag_4x3: "flags/4x3/ki.svg",
@@ -1138,7 +1138,7 @@ const countries = [
 	},
 	{
 		capital: "Pristina",
-		code: "XK",
+		code: "xk",
 		continent: "Europe",
 		flag_1x1: "flags/1x1/xk.svg",
 		flag_4x3: "flags/4x3/xk.svg",
@@ -1147,7 +1147,7 @@ const countries = [
 	},
 	{
 		capital: "Kuwait City",
-		code: "KW",
+		code: "kw",
 		continent: "Asia",
 		flag_1x1: "flags/1x1/kw.svg",
 		flag_4x3: "flags/4x3/kw.svg",
@@ -1156,7 +1156,7 @@ const countries = [
 	},
 	{
 		capital: "Bishkek",
-		code: "KG",
+		code: "kg",
 		continent: "Asia",
 		flag_1x1: "flags/1x1/kg.svg",
 		flag_4x3: "flags/4x3/kg.svg",
@@ -1165,7 +1165,7 @@ const countries = [
 	},
 	{
 		capital: "Vientiane",
-		code: "LA",
+		code: "la",
 		continent: "Asia",
 		flag_1x1: "flags/1x1/la.svg",
 		flag_4x3: "flags/4x3/la.svg",
@@ -1174,7 +1174,7 @@ const countries = [
 	},
 	{
 		capital: "Riga",
-		code: "LV",
+		code: "lv",
 		continent: "Europe",
 		flag_1x1: "flags/1x1/lv.svg",
 		flag_4x3: "flags/4x3/lv.svg",
@@ -1182,7 +1182,7 @@ const countries = [
 		name: "Latvia",
 	},
 	{
-		code: "ARAB",
+		code: "arab",
 		flag_1x1: "flags/1x1/arab.svg",
 		flag_4x3: "flags/4x3/arab.svg",
 		iso: false,
@@ -1190,7 +1190,7 @@ const countries = [
 	},
 	{
 		capital: "Beirut",
-		code: "LB",
+		code: "lb",
 		continent: "Asia",
 		flag_1x1: "flags/1x1/lb.svg",
 		flag_4x3: "flags/4x3/lb.svg",
@@ -1199,7 +1199,7 @@ const countries = [
 	},
 	{
 		capital: "Maseru",
-		code: "LS",
+		code: "ls",
 		continent: "Africa",
 		flag_1x1: "flags/1x1/ls.svg",
 		flag_4x3: "flags/4x3/ls.svg",
@@ -1208,7 +1208,7 @@ const countries = [
 	},
 	{
 		capital: "Monrovia",
-		code: "LR",
+		code: "lr",
 		continent: "Africa",
 		flag_1x1: "flags/1x1/lr.svg",
 		flag_4x3: "flags/4x3/lr.svg",
@@ -1217,7 +1217,7 @@ const countries = [
 	},
 	{
 		capital: "Tripoli",
-		code: "LY",
+		code: "ly",
 		continent: "Africa",
 		flag_1x1: "flags/1x1/ly.svg",
 		flag_4x3: "flags/4x3/ly.svg",
@@ -1226,7 +1226,7 @@ const countries = [
 	},
 	{
 		capital: "Vaduz",
-		code: "LI",
+		code: "li",
 		continent: "Europe",
 		flag_1x1: "flags/1x1/li.svg",
 		flag_4x3: "flags/4x3/li.svg",
@@ -1235,7 +1235,7 @@ const countries = [
 	},
 	{
 		capital: "Vilnius",
-		code: "LT",
+		code: "lt",
 		continent: "Europe",
 		flag_1x1: "flags/1x1/lt.svg",
 		flag_4x3: "flags/4x3/lt.svg",
@@ -1244,7 +1244,7 @@ const countries = [
 	},
 	{
 		capital: "Luxembourg City",
-		code: "LU",
+		code: "lu",
 		continent: "Europe",
 		flag_1x1: "flags/1x1/lu.svg",
 		flag_4x3: "flags/4x3/lu.svg",
@@ -1253,7 +1253,7 @@ const countries = [
 	},
 	{
 		capital: "Macau",
-		code: "MO",
+		code: "mo",
 		continent: "Asia",
 		flag_1x1: "flags/1x1/mo.svg",
 		flag_4x3: "flags/4x3/mo.svg",
@@ -1262,7 +1262,7 @@ const countries = [
 	},
 	{
 		capital: "Antananarivo",
-		code: "MG",
+		code: "mg",
 		continent: "Africa",
 		flag_1x1: "flags/1x1/mg.svg",
 		flag_4x3: "flags/4x3/mg.svg",
@@ -1271,7 +1271,7 @@ const countries = [
 	},
 	{
 		capital: "Lilongwe",
-		code: "MW",
+		code: "mw",
 		continent: "Africa",
 		flag_1x1: "flags/1x1/mw.svg",
 		flag_4x3: "flags/4x3/mw.svg",
@@ -1280,7 +1280,7 @@ const countries = [
 	},
 	{
 		capital: "Kuala Lumpur",
-		code: "MY",
+		code: "my",
 		continent: "Asia",
 		flag_1x1: "flags/1x1/my.svg",
 		flag_4x3: "flags/4x3/my.svg",
@@ -1289,7 +1289,7 @@ const countries = [
 	},
 	{
 		capital: "Malé",
-		code: "MV",
+		code: "mv",
 		continent: "Asia",
 		flag_1x1: "flags/1x1/mv.svg",
 		flag_4x3: "flags/4x3/mv.svg",
@@ -1298,7 +1298,7 @@ const countries = [
 	},
 	{
 		capital: "Bamako",
-		code: "ML",
+		code: "ml",
 		continent: "Africa",
 		flag_1x1: "flags/1x1/ml.svg",
 		flag_4x3: "flags/4x3/ml.svg",
@@ -1307,7 +1307,7 @@ const countries = [
 	},
 	{
 		capital: "Valletta",
-		code: "MT",
+		code: "mt",
 		continent: "Europe",
 		flag_1x1: "flags/1x1/mt.svg",
 		flag_4x3: "flags/4x3/mt.svg",
@@ -1316,7 +1316,7 @@ const countries = [
 	},
 	{
 		capital: "Majuro",
-		code: "MH",
+		code: "mh",
 		continent: "Oceania",
 		flag_1x1: "flags/1x1/mh.svg",
 		flag_4x3: "flags/4x3/mh.svg",
@@ -1325,7 +1325,7 @@ const countries = [
 	},
 	{
 		capital: "Fort-de-France",
-		code: "MQ",
+		code: "mq",
 		continent: "North America",
 		flag_1x1: "flags/1x1/mq.svg",
 		flag_4x3: "flags/4x3/mq.svg",
@@ -1334,7 +1334,7 @@ const countries = [
 	},
 	{
 		capital: "Nouakchott",
-		code: "MR",
+		code: "mr",
 		continent: "Africa",
 		flag_1x1: "flags/1x1/mr.svg",
 		flag_4x3: "flags/4x3/mr.svg",
@@ -1343,7 +1343,7 @@ const countries = [
 	},
 	{
 		capital: "Port Louis",
-		code: "MU",
+		code: "mu",
 		continent: "Africa",
 		flag_1x1: "flags/1x1/mu.svg",
 		flag_4x3: "flags/4x3/mu.svg",
@@ -1352,7 +1352,7 @@ const countries = [
 	},
 	{
 		capital: "Mamoudzou",
-		code: "YT",
+		code: "yt",
 		continent: "Africa",
 		flag_1x1: "flags/1x1/yt.svg",
 		flag_4x3: "flags/4x3/yt.svg",
@@ -1361,7 +1361,7 @@ const countries = [
 	},
 	{
 		capital: "Mexico City",
-		code: "MX",
+		code: "mx",
 		continent: "North America",
 		flag_1x1: "flags/1x1/mx.svg",
 		flag_4x3: "flags/4x3/mx.svg",
@@ -1370,7 +1370,7 @@ const countries = [
 	},
 	{
 		capital: "Chișinău",
-		code: "MD",
+		code: "md",
 		continent: "Europe",
 		flag_1x1: "flags/1x1/md.svg",
 		flag_4x3: "flags/4x3/md.svg",
@@ -1379,7 +1379,7 @@ const countries = [
 	},
 	{
 		capital: "Monaco",
-		code: "MC",
+		code: "mc",
 		continent: "Europe",
 		flag_1x1: "flags/1x1/mc.svg",
 		flag_4x3: "flags/4x3/mc.svg",
@@ -1388,7 +1388,7 @@ const countries = [
 	},
 	{
 		capital: "Ulaanbaatar",
-		code: "MN",
+		code: "mn",
 		continent: "Asia",
 		flag_1x1: "flags/1x1/mn.svg",
 		flag_4x3: "flags/4x3/mn.svg",
@@ -1397,7 +1397,7 @@ const countries = [
 	},
 	{
 		capital: "Podgorica",
-		code: "ME",
+		code: "me",
 		continent: "Europe",
 		flag_1x1: "flags/1x1/me.svg",
 		flag_4x3: "flags/4x3/me.svg",
@@ -1406,7 +1406,7 @@ const countries = [
 	},
 	{
 		capital: "Little Bay, Brades, Plymouth",
-		code: "MS",
+		code: "ms",
 		continent: "North America",
 		flag_1x1: "flags/1x1/ms.svg",
 		flag_4x3: "flags/4x3/ms.svg",
@@ -1415,7 +1415,7 @@ const countries = [
 	},
 	{
 		capital: "Rabat",
-		code: "MA",
+		code: "ma",
 		continent: "Africa",
 		flag_1x1: "flags/1x1/ma.svg",
 		flag_4x3: "flags/4x3/ma.svg",
@@ -1424,7 +1424,7 @@ const countries = [
 	},
 	{
 		capital: "Maputo",
-		code: "MZ",
+		code: "mz",
 		continent: "Africa",
 		flag_1x1: "flags/1x1/mz.svg",
 		flag_4x3: "flags/4x3/mz.svg",
@@ -1433,7 +1433,7 @@ const countries = [
 	},
 	{
 		capital: "Naypyidaw",
-		code: "MM",
+		code: "mm",
 		continent: "Asia",
 		flag_1x1: "flags/1x1/mm.svg",
 		flag_4x3: "flags/4x3/mm.svg",
@@ -1442,7 +1442,7 @@ const countries = [
 	},
 	{
 		capital: "Windhoek",
-		code: "NA",
+		code: "na",
 		continent: "Africa",
 		flag_1x1: "flags/1x1/na.svg",
 		flag_4x3: "flags/4x3/na.svg",
@@ -1451,7 +1451,7 @@ const countries = [
 	},
 	{
 		capital: "Yaren District",
-		code: "NR",
+		code: "nr",
 		continent: "Oceania",
 		flag_1x1: "flags/1x1/nr.svg",
 		flag_4x3: "flags/4x3/nr.svg",
@@ -1460,7 +1460,7 @@ const countries = [
 	},
 	{
 		capital: "Kathmandu",
-		code: "NP",
+		code: "np",
 		continent: "Asia",
 		flag_1x1: "flags/1x1/np.svg",
 		flag_4x3: "flags/4x3/np.svg",
@@ -1469,7 +1469,7 @@ const countries = [
 	},
 	{
 		capital: "Amsterdam",
-		code: "NL",
+		code: "nl",
 		continent: "Europe",
 		flag_1x1: "flags/1x1/nl.svg",
 		flag_4x3: "flags/4x3/nl.svg",
@@ -1478,7 +1478,7 @@ const countries = [
 	},
 	{
 		capital: "Nouméa",
-		code: "NC",
+		code: "nc",
 		continent: "Oceania",
 		flag_1x1: "flags/1x1/nc.svg",
 		flag_4x3: "flags/4x3/nc.svg",
@@ -1487,7 +1487,7 @@ const countries = [
 	},
 	{
 		capital: "Wellington",
-		code: "NZ",
+		code: "nz",
 		continent: "Oceania",
 		flag_1x1: "flags/1x1/nz.svg",
 		flag_4x3: "flags/4x3/nz.svg",
@@ -1496,7 +1496,7 @@ const countries = [
 	},
 	{
 		capital: "Managua",
-		code: "NI",
+		code: "ni",
 		continent: "North America",
 		flag_1x1: "flags/1x1/ni.svg",
 		flag_4x3: "flags/4x3/ni.svg",
@@ -1505,7 +1505,7 @@ const countries = [
 	},
 	{
 		capital: "Niamey",
-		code: "NE",
+		code: "ne",
 		continent: "Africa",
 		flag_1x1: "flags/1x1/ne.svg",
 		flag_4x3: "flags/4x3/ne.svg",
@@ -1514,7 +1514,7 @@ const countries = [
 	},
 	{
 		capital: "Abuja",
-		code: "NG",
+		code: "ng",
 		continent: "Africa",
 		flag_1x1: "flags/1x1/ng.svg",
 		flag_4x3: "flags/4x3/ng.svg",
@@ -1523,7 +1523,7 @@ const countries = [
 	},
 	{
 		capital: "Alofi",
-		code: "NU",
+		code: "nu",
 		continent: "Oceania",
 		flag_1x1: "flags/1x1/nu.svg",
 		flag_4x3: "flags/4x3/nu.svg",
@@ -1532,7 +1532,7 @@ const countries = [
 	},
 	{
 		capital: "Kingston",
-		code: "NF",
+		code: "nf",
 		continent: "Oceania",
 		flag_1x1: "flags/1x1/nf.svg",
 		flag_4x3: "flags/4x3/nf.svg",
@@ -1541,7 +1541,7 @@ const countries = [
 	},
 	{
 		capital: "Pyongyang",
-		code: "KP",
+		code: "kp",
 		continent: "Asia",
 		flag_1x1: "flags/1x1/kp.svg",
 		flag_4x3: "flags/4x3/kp.svg",
@@ -1550,7 +1550,7 @@ const countries = [
 	},
 	{
 		capital: "Skopje",
-		code: "MK",
+		code: "mk",
 		continent: "Europe",
 		flag_1x1: "flags/1x1/mk.svg",
 		flag_4x3: "flags/4x3/mk.svg",
@@ -1559,7 +1559,7 @@ const countries = [
 	},
 	{
 		capital: "Belfast",
-		code: "GB-NIR",
+		code: "gb-nir",
 		continent: "Europe",
 		flag_1x1: "flags/1x1/gb-nir.svg",
 		flag_4x3: "flags/4x3/gb-nir.svg",
@@ -1568,7 +1568,7 @@ const countries = [
 	},
 	{
 		capital: "Saipan",
-		code: "MP",
+		code: "mp",
 		continent: "Oceania",
 		flag_1x1: "flags/1x1/mp.svg",
 		flag_4x3: "flags/4x3/mp.svg",
@@ -1577,7 +1577,7 @@ const countries = [
 	},
 	{
 		capital: "Oslo",
-		code: "NO",
+		code: "no",
 		continent: "Europe",
 		flag_1x1: "flags/1x1/no.svg",
 		flag_4x3: "flags/4x3/no.svg",
@@ -1586,7 +1586,7 @@ const countries = [
 	},
 	{
 		capital: "Muscat",
-		code: "OM",
+		code: "om",
 		continent: "Asia",
 		flag_1x1: "flags/1x1/om.svg",
 		flag_4x3: "flags/4x3/om.svg",
@@ -1594,7 +1594,7 @@ const countries = [
 		name: "Oman",
 	},
 	{
-		code: "PC",
+		code: "pc",
 		flag_1x1: "flags/1x1/pc.svg",
 		flag_4x3: "flags/4x3/pc.svg",
 		iso: false,
@@ -1602,7 +1602,7 @@ const countries = [
 	},
 	{
 		capital: "Islamabad",
-		code: "PK",
+		code: "pk",
 		continent: "Asia",
 		flag_1x1: "flags/1x1/pk.svg",
 		flag_4x3: "flags/4x3/pk.svg",
@@ -1611,7 +1611,7 @@ const countries = [
 	},
 	{
 		capital: "Ngerulmud",
-		code: "PW",
+		code: "pw",
 		continent: "Oceania",
 		flag_1x1: "flags/1x1/pw.svg",
 		flag_4x3: "flags/4x3/pw.svg",
@@ -1620,7 +1620,7 @@ const countries = [
 	},
 	{
 		capital: "Panama City",
-		code: "PA",
+		code: "pa",
 		continent: "North America",
 		flag_1x1: "flags/1x1/pa.svg",
 		flag_4x3: "flags/4x3/pa.svg",
@@ -1629,7 +1629,7 @@ const countries = [
 	},
 	{
 		capital: "Port Moresby",
-		code: "PG",
+		code: "pg",
 		continent: "Oceania",
 		flag_1x1: "flags/1x1/pg.svg",
 		flag_4x3: "flags/4x3/pg.svg",
@@ -1638,7 +1638,7 @@ const countries = [
 	},
 	{
 		capital: "Asunción",
-		code: "PY",
+		code: "py",
 		continent: "South America",
 		flag_1x1: "flags/1x1/py.svg",
 		flag_4x3: "flags/4x3/py.svg",
@@ -1647,7 +1647,7 @@ const countries = [
 	},
 	{
 		capital: "Lima",
-		code: "PE",
+		code: "pe",
 		continent: "South America",
 		flag_1x1: "flags/1x1/pe.svg",
 		flag_4x3: "flags/4x3/pe.svg",
@@ -1656,7 +1656,7 @@ const countries = [
 	},
 	{
 		capital: "Manila",
-		code: "PH",
+		code: "ph",
 		continent: "Asia",
 		flag_1x1: "flags/1x1/ph.svg",
 		flag_4x3: "flags/4x3/ph.svg",
@@ -1665,7 +1665,7 @@ const countries = [
 	},
 	{
 		capital: "Adamstown",
-		code: "PN",
+		code: "pn",
 		continent: "Oceania",
 		flag_1x1: "flags/1x1/pn.svg",
 		flag_4x3: "flags/4x3/pn.svg",
@@ -1674,7 +1674,7 @@ const countries = [
 	},
 	{
 		capital: "Warsaw",
-		code: "PL",
+		code: "pl",
 		continent: "Europe",
 		flag_1x1: "flags/1x1/pl.svg",
 		flag_4x3: "flags/4x3/pl.svg",
@@ -1683,7 +1683,7 @@ const countries = [
 	},
 	{
 		capital: "Lisbon",
-		code: "PT",
+		code: "pt",
 		continent: "Europe",
 		flag_1x1: "flags/1x1/pt.svg",
 		flag_4x3: "flags/4x3/pt.svg",
@@ -1692,7 +1692,7 @@ const countries = [
 	},
 	{
 		capital: "San Juan",
-		code: "PR",
+		code: "pr",
 		continent: "North America",
 		flag_1x1: "flags/1x1/pr.svg",
 		flag_4x3: "flags/4x3/pr.svg",
@@ -1701,7 +1701,7 @@ const countries = [
 	},
 	{
 		capital: "Doha",
-		code: "QA",
+		code: "qa",
 		continent: "Asia",
 		flag_1x1: "flags/1x1/qa.svg",
 		flag_4x3: "flags/4x3/qa.svg",
@@ -1710,7 +1710,7 @@ const countries = [
 	},
 	{
 		capital: "Brazzaville",
-		code: "CG",
+		code: "cg",
 		continent: "Africa",
 		flag_1x1: "flags/1x1/cg.svg",
 		flag_4x3: "flags/4x3/cg.svg",
@@ -1719,7 +1719,7 @@ const countries = [
 	},
 	{
 		capital: "Bucharest",
-		code: "RO",
+		code: "ro",
 		continent: "Europe",
 		flag_1x1: "flags/1x1/ro.svg",
 		flag_4x3: "flags/4x3/ro.svg",
@@ -1728,7 +1728,7 @@ const countries = [
 	},
 	{
 		capital: "Moscow",
-		code: "RU",
+		code: "ru",
 		continent: "Europe",
 		flag_1x1: "flags/1x1/ru.svg",
 		flag_4x3: "flags/4x3/ru.svg",
@@ -1737,7 +1737,7 @@ const countries = [
 	},
 	{
 		capital: "Kigali",
-		code: "RW",
+		code: "rw",
 		continent: "Africa",
 		flag_1x1: "flags/1x1/rw.svg",
 		flag_4x3: "flags/4x3/rw.svg",
@@ -1746,7 +1746,7 @@ const countries = [
 	},
 	{
 		capital: "Saint-Denis",
-		code: "RE",
+		code: "re",
 		continent: "Africa",
 		flag_1x1: "flags/1x1/re.svg",
 		flag_4x3: "flags/4x3/re.svg",
@@ -1755,7 +1755,7 @@ const countries = [
 	},
 	{
 		capital: "Gustavia",
-		code: "BL",
+		code: "bl",
 		continent: "North America",
 		flag_1x1: "flags/1x1/bl.svg",
 		flag_4x3: "flags/4x3/bl.svg",
@@ -1764,7 +1764,7 @@ const countries = [
 	},
 	{
 		capital: "Jamestown",
-		code: "SH-HL",
+		code: "sh-hl",
 		continent: "Africa",
 		flag_1x1: "flags/1x1/sh-hl.svg",
 		flag_4x3: "flags/4x3/sh-hl.svg",
@@ -1773,7 +1773,7 @@ const countries = [
 	},
 	{
 		capital: "Jamestown",
-		code: "SH",
+		code: "sh",
 		continent: "Africa",
 		flag_1x1: "flags/1x1/sh.svg",
 		flag_4x3: "flags/4x3/sh.svg",
@@ -1782,7 +1782,7 @@ const countries = [
 	},
 	{
 		capital: "Basseterre",
-		code: "KN",
+		code: "kn",
 		continent: "North America",
 		flag_1x1: "flags/1x1/kn.svg",
 		flag_4x3: "flags/4x3/kn.svg",
@@ -1791,7 +1791,7 @@ const countries = [
 	},
 	{
 		capital: "Castries",
-		code: "LC",
+		code: "lc",
 		continent: "North America",
 		flag_1x1: "flags/1x1/lc.svg",
 		flag_4x3: "flags/4x3/lc.svg",
@@ -1800,7 +1800,7 @@ const countries = [
 	},
 	{
 		capital: "Marigot",
-		code: "MF",
+		code: "mf",
 		continent: "North America",
 		flag_1x1: "flags/1x1/mf.svg",
 		flag_4x3: "flags/4x3/mf.svg",
@@ -1809,7 +1809,7 @@ const countries = [
 	},
 	{
 		capital: "Saint-Pierre",
-		code: "PM",
+		code: "pm",
 		continent: "North America",
 		flag_1x1: "flags/1x1/pm.svg",
 		flag_4x3: "flags/4x3/pm.svg",
@@ -1818,7 +1818,7 @@ const countries = [
 	},
 	{
 		capital: "Kingstown",
-		code: "VC",
+		code: "vc",
 		continent: "North America",
 		flag_1x1: "flags/1x1/vc.svg",
 		flag_4x3: "flags/4x3/vc.svg",
@@ -1827,7 +1827,7 @@ const countries = [
 	},
 	{
 		capital: "Apia",
-		code: "WS",
+		code: "ws",
 		continent: "Oceania",
 		flag_1x1: "flags/1x1/ws.svg",
 		flag_4x3: "flags/4x3/ws.svg",
@@ -1836,7 +1836,7 @@ const countries = [
 	},
 	{
 		capital: "San Marino",
-		code: "SM",
+		code: "sm",
 		continent: "Europe",
 		flag_1x1: "flags/1x1/sm.svg",
 		flag_4x3: "flags/4x3/sm.svg",
@@ -1845,7 +1845,7 @@ const countries = [
 	},
 	{
 		capital: "São Tomé",
-		code: "ST",
+		code: "st",
 		continent: "Africa",
 		flag_1x1: "flags/1x1/st.svg",
 		flag_4x3: "flags/4x3/st.svg",
@@ -1854,7 +1854,7 @@ const countries = [
 	},
 	{
 		capital: "Riyadh",
-		code: "SA",
+		code: "sa",
 		continent: "Asia",
 		flag_1x1: "flags/1x1/sa.svg",
 		flag_4x3: "flags/4x3/sa.svg",
@@ -1863,7 +1863,7 @@ const countries = [
 	},
 	{
 		capital: "Edinburgh",
-		code: "GB-SCT",
+		code: "gb-sct",
 		continent: "Europe",
 		flag_1x1: "flags/1x1/gb-sct.svg",
 		flag_4x3: "flags/4x3/gb-sct.svg",
@@ -1872,7 +1872,7 @@ const countries = [
 	},
 	{
 		capital: "Dakar",
-		code: "SN",
+		code: "sn",
 		continent: "Africa",
 		flag_1x1: "flags/1x1/sn.svg",
 		flag_4x3: "flags/4x3/sn.svg",
@@ -1881,7 +1881,7 @@ const countries = [
 	},
 	{
 		capital: "Belgrade",
-		code: "RS",
+		code: "rs",
 		continent: "Europe",
 		flag_1x1: "flags/1x1/rs.svg",
 		flag_4x3: "flags/4x3/rs.svg",
@@ -1890,7 +1890,7 @@ const countries = [
 	},
 	{
 		capital: "Victoria",
-		code: "SC",
+		code: "sc",
 		continent: "Africa",
 		flag_1x1: "flags/1x1/sc.svg",
 		flag_4x3: "flags/4x3/sc.svg",
@@ -1899,7 +1899,7 @@ const countries = [
 	},
 	{
 		capital: "Freetown",
-		code: "SL",
+		code: "sl",
 		continent: "Africa",
 		flag_1x1: "flags/1x1/sl.svg",
 		flag_4x3: "flags/4x3/sl.svg",
@@ -1908,7 +1908,7 @@ const countries = [
 	},
 	{
 		capital: "Singapore",
-		code: "SG",
+		code: "sg",
 		continent: "Asia",
 		flag_1x1: "flags/1x1/sg.svg",
 		flag_4x3: "flags/4x3/sg.svg",
@@ -1917,7 +1917,7 @@ const countries = [
 	},
 	{
 		capital: "Philipsburg",
-		code: "SX",
+		code: "sx",
 		continent: "North America",
 		flag_1x1: "flags/1x1/sx.svg",
 		flag_4x3: "flags/4x3/sx.svg",
@@ -1926,7 +1926,7 @@ const countries = [
 	},
 	{
 		capital: "Bratislava",
-		code: "SK",
+		code: "sk",
 		continent: "Europe",
 		flag_1x1: "flags/1x1/sk.svg",
 		flag_4x3: "flags/4x3/sk.svg",
@@ -1935,7 +1935,7 @@ const countries = [
 	},
 	{
 		capital: "Ljubljana",
-		code: "SI",
+		code: "si",
 		continent: "Europe",
 		flag_1x1: "flags/1x1/si.svg",
 		flag_4x3: "flags/4x3/si.svg",
@@ -1944,7 +1944,7 @@ const countries = [
 	},
 	{
 		capital: "Honiara",
-		code: "SB",
+		code: "sb",
 		continent: "Oceania",
 		flag_1x1: "flags/1x1/sb.svg",
 		flag_4x3: "flags/4x3/sb.svg",
@@ -1953,7 +1953,7 @@ const countries = [
 	},
 	{
 		capital: "Mogadishu",
-		code: "SO",
+		code: "so",
 		continent: "Africa",
 		flag_1x1: "flags/1x1/so.svg",
 		flag_4x3: "flags/4x3/so.svg",
@@ -1962,7 +1962,7 @@ const countries = [
 	},
 	{
 		capital: "Pretoria",
-		code: "ZA",
+		code: "za",
 		continent: "Africa",
 		flag_1x1: "flags/1x1/za.svg",
 		flag_4x3: "flags/4x3/za.svg",
@@ -1971,7 +1971,7 @@ const countries = [
 	},
 	{
 		capital: "King Edward Point",
-		code: "GS",
+		code: "gs",
 		continent: "Antarctica",
 		flag_1x1: "flags/1x1/gs.svg",
 		flag_4x3: "flags/4x3/gs.svg",
@@ -1980,7 +1980,7 @@ const countries = [
 	},
 	{
 		capital: "Seoul",
-		code: "KR",
+		code: "kr",
 		continent: "Asia",
 		flag_1x1: "flags/1x1/kr.svg",
 		flag_4x3: "flags/4x3/kr.svg",
@@ -1989,7 +1989,7 @@ const countries = [
 	},
 	{
 		capital: "Juba",
-		code: "SS",
+		code: "ss",
 		continent: "Africa",
 		flag_1x1: "flags/1x1/ss.svg",
 		flag_4x3: "flags/4x3/ss.svg",
@@ -1998,7 +1998,7 @@ const countries = [
 	},
 	{
 		capital: "Madrid",
-		code: "ES",
+		code: "es",
 		continent: "Europe",
 		flag_1x1: "flags/1x1/es.svg",
 		flag_4x3: "flags/4x3/es.svg",
@@ -2007,7 +2007,7 @@ const countries = [
 	},
 	{
 		capital: "Sri Jayawardenepura Kotte, Colombo",
-		code: "LK",
+		code: "lk",
 		continent: "Asia",
 		flag_1x1: "flags/1x1/lk.svg",
 		flag_4x3: "flags/4x3/lk.svg",
@@ -2016,7 +2016,7 @@ const countries = [
 	},
 	{
 		capital: "Ramallah",
-		code: "PS",
+		code: "ps",
 		continent: "Asia",
 		flag_1x1: "flags/1x1/ps.svg",
 		flag_4x3: "flags/4x3/ps.svg",
@@ -2025,7 +2025,7 @@ const countries = [
 	},
 	{
 		capital: "Khartoum",
-		code: "SD",
+		code: "sd",
 		continent: "Africa",
 		flag_1x1: "flags/1x1/sd.svg",
 		flag_4x3: "flags/4x3/sd.svg",
@@ -2034,7 +2034,7 @@ const countries = [
 	},
 	{
 		capital: "Paramaribo",
-		code: "SR",
+		code: "sr",
 		continent: "South America",
 		flag_1x1: "flags/1x1/sr.svg",
 		flag_4x3: "flags/4x3/sr.svg",
@@ -2043,7 +2043,7 @@ const countries = [
 	},
 	{
 		capital: "Longyearbyen",
-		code: "SJ",
+		code: "sj",
 		continent: "Europe",
 		flag_1x1: "flags/1x1/sj.svg",
 		flag_4x3: "flags/4x3/sj.svg",
@@ -2052,7 +2052,7 @@ const countries = [
 	},
 	{
 		capital: "Stockholm",
-		code: "SE",
+		code: "se",
 		continent: "Europe",
 		flag_1x1: "flags/1x1/se.svg",
 		flag_4x3: "flags/4x3/se.svg",
@@ -2061,7 +2061,7 @@ const countries = [
 	},
 	{
 		capital: "Bern",
-		code: "CH",
+		code: "ch",
 		continent: "Europe",
 		flag_1x1: "flags/1x1/ch.svg",
 		flag_4x3: "flags/4x3/ch.svg",
@@ -2070,7 +2070,7 @@ const countries = [
 	},
 	{
 		capital: "Damascus",
-		code: "SY",
+		code: "sy",
 		continent: "Asia",
 		flag_1x1: "flags/1x1/sy.svg",
 		flag_4x3: "flags/4x3/sy.svg",
@@ -2079,7 +2079,7 @@ const countries = [
 	},
 	{
 		capital: "Taipei",
-		code: "TW",
+		code: "tw",
 		continent: "Asia",
 		flag_1x1: "flags/1x1/tw.svg",
 		flag_4x3: "flags/4x3/tw.svg",
@@ -2088,7 +2088,7 @@ const countries = [
 	},
 	{
 		capital: "Dushanbe",
-		code: "TJ",
+		code: "tj",
 		continent: "Asia",
 		flag_1x1: "flags/1x1/tj.svg",
 		flag_4x3: "flags/4x3/tj.svg",
@@ -2097,7 +2097,7 @@ const countries = [
 	},
 	{
 		capital: "Dodoma",
-		code: "TZ",
+		code: "tz",
 		continent: "Africa",
 		flag_1x1: "flags/1x1/tz.svg",
 		flag_4x3: "flags/4x3/tz.svg",
@@ -2106,7 +2106,7 @@ const countries = [
 	},
 	{
 		capital: "Bangkok",
-		code: "TH",
+		code: "th",
 		continent: "Asia",
 		flag_1x1: "flags/1x1/th.svg",
 		flag_4x3: "flags/4x3/th.svg",
@@ -2115,7 +2115,7 @@ const countries = [
 	},
 	{
 		capital: "Dili",
-		code: "TL",
+		code: "tl",
 		continent: "Asia",
 		flag_1x1: "flags/1x1/tl.svg",
 		flag_4x3: "flags/4x3/tl.svg",
@@ -2124,7 +2124,7 @@ const countries = [
 	},
 	{
 		capital: "Lomé",
-		code: "TG",
+		code: "tg",
 		continent: "Africa",
 		flag_1x1: "flags/1x1/tg.svg",
 		flag_4x3: "flags/4x3/tg.svg",
@@ -2133,7 +2133,7 @@ const countries = [
 	},
 	{
 		capital: "Nukunonu, Atafu,Tokelau",
-		code: "TK",
+		code: "tk",
 		continent: "Oceania",
 		flag_1x1: "flags/1x1/tk.svg",
 		flag_4x3: "flags/4x3/tk.svg",
@@ -2142,7 +2142,7 @@ const countries = [
 	},
 	{
 		capital: "Nukuʻalofa",
-		code: "TO",
+		code: "to",
 		continent: "Oceania",
 		flag_1x1: "flags/1x1/to.svg",
 		flag_4x3: "flags/4x3/to.svg",
@@ -2151,7 +2151,7 @@ const countries = [
 	},
 	{
 		capital: "Port of Spain",
-		code: "TT",
+		code: "tt",
 		continent: "South America",
 		flag_1x1: "flags/1x1/tt.svg",
 		flag_4x3: "flags/4x3/tt.svg",
@@ -2160,7 +2160,7 @@ const countries = [
 	},
 	{
 		capital: "Edinburgh of the Seven Seas",
-		code: "SH-TA",
+		code: "sh-ta",
 		continent: "Africa",
 		flag_1x1: "flags/1x1/sh-ta.svg",
 		flag_4x3: "flags/4x3/sh-ta.svg",
@@ -2169,7 +2169,7 @@ const countries = [
 	},
 	{
 		capital: "Tunis",
-		code: "TN",
+		code: "tn",
 		continent: "Africa",
 		flag_1x1: "flags/1x1/tn.svg",
 		flag_4x3: "flags/4x3/tn.svg",
@@ -2178,7 +2178,7 @@ const countries = [
 	},
 	{
 		capital: "Ashgabat",
-		code: "TM",
+		code: "tm",
 		continent: "Asia",
 		flag_1x1: "flags/1x1/tm.svg",
 		flag_4x3: "flags/4x3/tm.svg",
@@ -2187,7 +2187,7 @@ const countries = [
 	},
 	{
 		capital: "Cockburn Town",
-		code: "TC",
+		code: "tc",
 		continent: "North America",
 		flag_1x1: "flags/1x1/tc.svg",
 		flag_4x3: "flags/4x3/tc.svg",
@@ -2196,7 +2196,7 @@ const countries = [
 	},
 	{
 		capital: "Funafuti",
-		code: "TV",
+		code: "tv",
 		continent: "Oceania",
 		flag_1x1: "flags/1x1/tv.svg",
 		flag_4x3: "flags/4x3/tv.svg",
@@ -2205,7 +2205,7 @@ const countries = [
 	},
 	{
 		capital: "Ankara",
-		code: "TR",
+		code: "tr",
 		continent: "Asia",
 		flag_1x1: "flags/1x1/tr.svg",
 		flag_4x3: "flags/4x3/tr.svg",
@@ -2214,7 +2214,7 @@ const countries = [
 	},
 	{
 		capital: "Kampala",
-		code: "UG",
+		code: "ug",
 		continent: "Africa",
 		flag_1x1: "flags/1x1/ug.svg",
 		flag_4x3: "flags/4x3/ug.svg",
@@ -2223,7 +2223,7 @@ const countries = [
 	},
 	{
 		capital: "Kiev",
-		code: "UA",
+		code: "ua",
 		continent: "Europe",
 		flag_1x1: "flags/1x1/ua.svg",
 		flag_4x3: "flags/4x3/ua.svg",
@@ -2232,7 +2232,7 @@ const countries = [
 	},
 	{
 		capital: "Abu Dhabi",
-		code: "AE",
+		code: "ae",
 		continent: "Asia",
 		flag_1x1: "flags/1x1/ae.svg",
 		flag_4x3: "flags/4x3/ae.svg",
@@ -2241,7 +2241,7 @@ const countries = [
 	},
 	{
 		capital: "London",
-		code: "GB",
+		code: "gb",
 		continent: "Europe",
 		flag_1x1: "flags/1x1/gb.svg",
 		flag_4x3: "flags/4x3/gb.svg",
@@ -2249,7 +2249,7 @@ const countries = [
 		name: "United Kingdom",
 	},
 	{
-		code: "UN",
+		code: "un",
 		flag_1x1: "flags/1x1/un.svg",
 		flag_4x3: "flags/4x3/un.svg",
 		iso: false,
@@ -2257,7 +2257,7 @@ const countries = [
 	},
 	{
 		capital: "Washington, D.C.",
-		code: "UM",
+		code: "um",
 		continent: "North America",
 		flag_1x1: "flags/1x1/um.svg",
 		flag_4x3: "flags/4x3/um.svg",
@@ -2266,7 +2266,7 @@ const countries = [
 	},
 	{
 		capital: "Washington, D.C.",
-		code: "US",
+		code: "us",
 		continent: "North America",
 		flag_1x1: "flags/1x1/us.svg",
 		flag_4x3: "flags/4x3/us.svg",
@@ -2274,7 +2274,7 @@ const countries = [
 		name: "United States of America",
 	},
 	{
-		code: "XX",
+		code: "xx",
 		flag_1x1: "flags/1x1/xx.svg",
 		flag_4x3: "flags/4x3/xx.svg",
 		iso: false,
@@ -2282,7 +2282,7 @@ const countries = [
 	},
 	{
 		capital: "Montevideo",
-		code: "UY",
+		code: "uy",
 		continent: "South America",
 		flag_1x1: "flags/1x1/uy.svg",
 		flag_4x3: "flags/4x3/uy.svg",
@@ -2291,7 +2291,7 @@ const countries = [
 	},
 	{
 		capital: "Tashkent",
-		code: "UZ",
+		code: "uz",
 		continent: "Asia",
 		flag_1x1: "flags/1x1/uz.svg",
 		flag_4x3: "flags/4x3/uz.svg",
@@ -2300,7 +2300,7 @@ const countries = [
 	},
 	{
 		capital: "Port Vila",
-		code: "VU",
+		code: "vu",
 		continent: "Oceania",
 		flag_1x1: "flags/1x1/vu.svg",
 		flag_4x3: "flags/4x3/vu.svg",
@@ -2309,7 +2309,7 @@ const countries = [
 	},
 	{
 		capital: "Caracas",
-		code: "VE",
+		code: "ve",
 		continent: "South America",
 		flag_1x1: "flags/1x1/ve.svg",
 		flag_4x3: "flags/4x3/ve.svg",
@@ -2318,7 +2318,7 @@ const countries = [
 	},
 	{
 		capital: "Hanoi",
-		code: "VN",
+		code: "vn",
 		continent: "Asia",
 		flag_1x1: "flags/1x1/vn.svg",
 		flag_4x3: "flags/4x3/vn.svg",
@@ -2327,7 +2327,7 @@ const countries = [
 	},
 	{
 		capital: "Road Town",
-		code: "VG",
+		code: "vg",
 		continent: "North America",
 		flag_1x1: "flags/1x1/vg.svg",
 		flag_4x3: "flags/4x3/vg.svg",
@@ -2336,7 +2336,7 @@ const countries = [
 	},
 	{
 		capital: "Charlotte Amalie",
-		code: "VI",
+		code: "vi",
 		continent: "North America",
 		flag_1x1: "flags/1x1/vi.svg",
 		flag_4x3: "flags/4x3/vi.svg",
@@ -2345,7 +2345,7 @@ const countries = [
 	},
 	{
 		capital: "Cardiff",
-		code: "GB-WLS",
+		code: "gb-wls",
 		continent: "Europe",
 		flag_1x1: "flags/1x1/gb-wls.svg",
 		flag_4x3: "flags/4x3/gb-wls.svg",
@@ -2354,7 +2354,7 @@ const countries = [
 	},
 	{
 		capital: "Mata-Utu",
-		code: "WF",
+		code: "wf",
 		continent: "Oceania",
 		flag_1x1: "flags/1x1/wf.svg",
 		flag_4x3: "flags/4x3/wf.svg",
@@ -2363,7 +2363,7 @@ const countries = [
 	},
 	{
 		capital: "Laayoune",
-		code: "EH",
+		code: "eh",
 		continent: "Africa",
 		flag_1x1: "flags/1x1/eh.svg",
 		flag_4x3: "flags/4x3/eh.svg",
@@ -2372,7 +2372,7 @@ const countries = [
 	},
 	{
 		capital: "Sana'a",
-		code: "YE",
+		code: "ye",
 		continent: "Asia",
 		flag_1x1: "flags/1x1/ye.svg",
 		flag_4x3: "flags/4x3/ye.svg",
@@ -2381,7 +2381,7 @@ const countries = [
 	},
 	{
 		capital: "Lusaka",
-		code: "ZM",
+		code: "zm",
 		continent: "Africa",
 		flag_1x1: "flags/1x1/zm.svg",
 		flag_4x3: "flags/4x3/zm.svg",
@@ -2390,7 +2390,7 @@ const countries = [
 	},
 	{
 		capital: "Harare",
-		code: "ZW",
+		code: "zw",
 		continent: "Africa",
 		flag_1x1: "flags/1x1/zw.svg",
 		flag_4x3: "flags/4x3/zw.svg",
