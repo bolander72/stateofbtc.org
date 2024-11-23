@@ -30,7 +30,7 @@ export function StoreProvider({ children }: { children: React.ReactNode }) {
 				isSkipped: { type: "boolean", default: false },
 			},
 		});
-	});
+	}, [params.surveyId]);
 
 	useEffect(() => {
 		if (!store) return;

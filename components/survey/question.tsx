@@ -11,6 +11,7 @@ import { cn } from "@/lib/utils";
 import { IQuestion, IQuestionOption } from "@/db/models/types";
 import { ObjectId } from "mongoose";
 import { useStore, useCell } from "tinybase/ui-react";
+import CountryCombobox from "@/components/country-combobox";
 
 interface Props {
 	_id: ObjectId;
@@ -49,7 +50,9 @@ export default function Question({ _id, title, type, options = [] }: Props) {
 		store?.setCell("responses", String(_id), "value", JSON.stringify(newValue));
 	};
 
-	const updateResponse = (updates: Record<string, string | string[] | boolean>) => {
+	const updateResponse = (
+		updates: Record<string, string | string[] | boolean>,
+	) => {
 		store?.setPartialRow("responses", String(_id), {
 			...updates,
 			value: Array.isArray(updates.value)
@@ -70,6 +73,10 @@ export default function Question({ _id, title, type, options = [] }: Props) {
 		return parsedValue.length > 0 || isSkipped
 			? "border-green-700 dark:border-green-600"
 			: "border-border";
+	};
+
+	const handleSelectChange = (countryName: string) => {
+		updateResponse({ type: "select", value: [countryName] });
 	};
 
 	return (
@@ -118,22 +125,35 @@ export default function Question({ _id, title, type, options = [] }: Props) {
 					}
 				>
 					{options.map((option) => (
-						<div
-							key={String(option._id)}
-							className="flex items-center space-x-2"
-						>
-							<RadioGroupItem
-								disabled={!!isSkipped}
-								value={String(option._id)}
-								id={`${_id}-${option._id}`}
-								checked={parsedValue.includes(String(option._id))}
-							/>
-							<Label
-								htmlFor={`${_id}-${option._id}`}
-								className={cn(!!isSkipped && "opacity-70")}
+						<div key={String(option._id)}>
+							<div
+								key={String(option._id)}
+								className="flex items-center space-x-2"
 							>
-								{option.label}
-							</Label>
+								<RadioGroupItem
+									disabled={!!isSkipped}
+									value={String(option._id)}
+									id={`${_id}-${option._id}`}
+									checked={parsedValue.includes(String(option._id))}
+								/>
+								<Label
+									htmlFor={`${_id}-${option._id}`}
+									className={cn(!!isSkipped && "opacity-70")}
+								>
+									{option.label}
+								</Label>
+							</div>
+							{option.isOther && parsedValue.includes(String(option._id)) && (
+								<Textarea
+									disabled={!!isSkipped}
+									placeholder="Please specify..."
+									value={otherText as string}
+									onChange={(e) =>
+										updateResponse({ otherText: e.target.value })
+									}
+									className="max-w-md my-2"
+								/>
+							)}
 						</div>
 					))}
 				</RadioGroup>
@@ -149,6 +169,16 @@ export default function Question({ _id, title, type, options = [] }: Props) {
 					}
 					className="max-w-md"
 				/>
+			)}
+
+			{type === "select-country" && (
+				<div className="max-w-md">
+					<CountryCombobox
+						value={parsedValue[0] || ""}
+						onChange={handleSelectChange}
+						disabled={!!isSkipped}
+					/>
+				</div>
 			)}
 
 			<div className="flex justify-between">

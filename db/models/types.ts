@@ -10,7 +10,7 @@ export interface IQuestionOption {
 export interface IQuestion {
 	_id: ObjectId;
 	title: string;
-	type: "checkbox" | "radio" | "text";
+	type: "checkbox" | "radio" | "text" | `select-${string}`;
 	options?: IQuestionOption[];
 }
 
