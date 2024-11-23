@@ -10,7 +10,7 @@ export interface IQuestionOption {
 export interface IQuestion {
 	_id: ObjectId;
 	title: string;
-	type: "checkbox" | "radio" | "text";
+	type: "checkbox" | "radio" | "text" | `select-${string}`;
 	options?: IQuestionOption[];
 }
 
@@ -30,8 +30,22 @@ export interface ISurvey {
 	isDefault: boolean;
 	submissionStartDate: Date;
 	submissionEndDate: Date;
-	createdAt: Date;
-	updatedAt: Date;
 }
 
 export interface ISurveyDocument extends ISurvey, Document {}
+
+export interface ISubmissionDocument extends Document {
+	surveyId: ObjectId;
+	date: Date;
+	responses: Array<{
+		sectionId: ObjectId;
+		questionId: ObjectId;
+		answer: {
+			value: string[];
+			type: string;
+			comment: string;
+			otherText: string;
+			isSkipped: boolean;
+		};
+	}>;
+}

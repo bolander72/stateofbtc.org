@@ -35,10 +35,10 @@ import { useParams, usePathname } from "next/navigation";
 import { Link } from "next-view-transitions";
 import { Button } from "../ui/button";
 import ThemeToggle from "../theme-toggle";
-import { useStore } from "../providers/store-provider";
 import { cn } from "@/lib/utils";
 import { Popover, PopoverContent, PopoverTrigger } from "../ui/popover";
 import { ISurvey } from "@/db/models/types";
+import { usePersisterStatus } from "@/components/providers/store-provider";
 
 type NavItem = {
 	title: string;
@@ -67,15 +67,15 @@ function findBreadcrumbPath(
 }
 
 type AppSidebarProps = React.ComponentProps<typeof Sidebar> & {
-	surveys?: ISurvey[];
+	surveys: ISurvey[];
 };
 
 export function AppSidebar({ surveys, ...props }: AppSidebarProps) {
-	const { autosaving } = useStore();
+	const { isPersisting } = usePersisterStatus();
 	const pathname = usePathname();
 	const params = useParams();
 
-	const versions = surveys?.map((survey) => ({
+	const versions = surveys.map((survey) => ({
 		id: String(survey._id),
 		title: survey.title,
 		isDisabled: !survey.isActive,
@@ -103,7 +103,7 @@ export function AppSidebar({ surveys, ...props }: AppSidebarProps) {
 				defaultOpen: true,
 				items: [
 					...(surveys
-						?.find((survey) => survey._id === params.surveyId)
+						.find((survey) => survey._id === params.surveyId)
 						?.sections?.map((section, index) => ({
 							title: `${index + 1}) ${section.title}`,
 							url: `/${params.surveyId}/${section._id}`,
@@ -170,12 +170,7 @@ export function AppSidebar({ surveys, ...props }: AppSidebarProps) {
 				<SidebarRail />
 				<SidebarFooter>
 					<div className="flex flex-row justify-between">
-						<Button size="icon" variant="outline" asChild>
-							<Link href="/">
-								<ArrowLeftFromLineIcon />
-							</Link>
-						</Button>
-						<div className="space-x-1.5">
+						{/* <div className="space-x-1.5">
 							<Button variant="outline" size="icon" asChild>
 								<Link href="https://x.com/bolander72" target="_blank">
 									<svg
@@ -205,37 +200,46 @@ export function AppSidebar({ surveys, ...props }: AppSidebarProps) {
 									</svg>
 								</Link>
 							</Button>
-						</div>
+						</div> */}
+						{/* <ThemeToggle /> */}
+					</div>
+					<hr />
+					<div className="flex flex-row justify-between">
+						<Button size="icon" variant="outline" asChild>
+							<Link href="/">
+								<ArrowLeftFromLineIcon />
+							</Link>
+						</Button>
+						<Popover>
+							<PopoverTrigger asChild>
+								<Button variant="outline" className="flex items-center">
+									{isPersisting ? "Autosaving" : "No Autosave"}
+									<span
+										className={cn(
+											"animate-pulse h-2 w-2 rounded-full opacity-75",
+											isPersisting
+												? "bg-green-700 dark:bg-green-600"
+												: "bg-red-700 dark:bg-red-600",
+										)}
+									></span>
+								</Button>
+							</PopoverTrigger>
+							<PopoverContent>
+								{isPersisting ? (
+									<p className="text-sm text-balance">
+										Survey responses will be saved automatically to browser
+										storage.
+									</p>
+								) : (
+									<p className="text-sm text-balance">
+										Autosaving is currently unavailable. All survey responses
+										will be lost if this site is reloaded or closed.
+									</p>
+								)}
+							</PopoverContent>
+						</Popover>
 						<ThemeToggle />
 					</div>
-					<Popover>
-						<PopoverTrigger asChild>
-							<Button variant="secondary" className="w-full flex items-center">
-								Autosave {autosaving ? "active" : "unavailable"}
-								<span
-									className={cn(
-										"animate-pulse h-2 w-2 rounded-full opacity-75",
-										autosaving
-											? "bg-green-700 dark:bg-green-600"
-											: "bg-red-700 dark:bg-red-600",
-									)}
-								></span>
-							</Button>
-						</PopoverTrigger>
-						<PopoverContent>
-							{autosaving ? (
-								<p className="text-sm text-balance">
-									Your survey responses will be saved automatically to browser
-									storage.
-								</p>
-							) : (
-								<p className="text-sm text-balance">
-									Autosaving is currently unavailable. All survey responses will
-									be lost if this site is reloaded or closed.
-								</p>
-							)}
-						</PopoverContent>
-					</Popover>
 				</SidebarFooter>
 			</Sidebar>
 			<SidebarInset>

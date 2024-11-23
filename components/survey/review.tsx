@@ -1,6 +1,5 @@
 "use client";
 
-import { useStore } from "@/components/providers/store-provider";
 import { notFound } from "next/navigation";
 import { Link } from "next-view-transitions";
 import {
@@ -9,13 +8,19 @@ import {
 	AccordionTrigger,
 	AccordionContent,
 } from "@/components/ui/accordion";
-import { CheckIcon, XIcon } from "lucide-react";
+import { CheckIcon, LoaderCircleIcon, XIcon } from "lucide-react";
 import { ISurvey } from "@/db/models/types";
+import { Button } from "../ui/button";
+import { Table } from "tinybase";
+import { useState } from "react";
+import { useStore } from "tinybase/ui-react";
 
-export default function Review({ survey }: { survey: ISurvey }) {
-	const { store } = useStore();
-
-	console.log("SURVEY", survey);
+export default function Review({
+	survey,
+	submitSurvey,
+}: { survey: ISurvey; submitSurvey: (responses: Table) => Promise<void> }) {
+	const store = useStore();
+	const [isSubmitting, setIsSubmitting] = useState(false);
 
 	if (!survey) {
 		return notFound();
@@ -42,7 +47,7 @@ export default function Review({ survey }: { survey: ISurvey }) {
 				return !response || (parsedValue.length === 0 && !isSkipped);
 			} catch (e) {
 				console.error("Error parsing response value:", e);
-				return true; // Consider it missing if we can't parse the value
+				return true;
 			}
 		});
 	};
@@ -53,7 +58,10 @@ export default function Review({ survey }: { survey: ISurvey }) {
 				(section) => getMissingQuestions(String(section._id)).length > 0,
 			) ? (
 				<>
-					<p>The following sections contain unanswered questions:</p>
+					<div>
+						<p>Please complete all questions before submitting.</p>
+						<p>The following sections have unanswered questions:</p>
+					</div>
 					<Accordion
 						type="multiple"
 						className="space-y-4"
@@ -99,7 +107,7 @@ export default function Review({ survey }: { survey: ISurvey }) {
 												<Link
 													key={String(question._id)}
 													href={`/${survey._id}/${String(section._id)}#${String(question._id)}`}
-													className="hover:underline line-clamp-1 w-fit"
+													className="hover:underline line-clamp-1 w-fit text-base"
 												>
 													<li>{question.title}</li>
 												</Link>
@@ -112,7 +120,26 @@ export default function Review({ survey }: { survey: ISurvey }) {
 					</Accordion>
 				</>
 			) : (
-				<p>All questions have been answered.</p>
+				<>
+					<p>Thanks for taking the time.</p>
+					{isSubmitting ? (
+						<Button disabled className="w-36">
+							<LoaderCircleIcon className="animate-spin mr-2" />
+							Submitting...
+						</Button>
+					) : (
+						<Button
+							className="w-36"
+							onClick={async () => {
+								setIsSubmitting(true);
+								await submitSurvey(store?.getTable("responses") as Table);
+								setIsSubmitting(false);
+							}}
+						>
+							Submit Survey
+						</Button>
+					)}
+				</>
 			)}
 		</div>
 	);
