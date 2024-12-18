@@ -1,5 +1,5 @@
 import { Table } from "tinybase";
-import { Submission } from "./models/submission.mode";
+import { Submission } from "./models/submission.model";
 
 export const createSurveySubmission = async (responses: Table) => {
 	const surveyId = Object.values(responses)[0].surveyId;
